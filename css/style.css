@@ -354,6 +354,30 @@
     transition: .5s;
     border-bottom: 2px solid transparent;
 }
+#jos {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100px; 
+}
+
+.cart-count {
+    position: absolute;
+    top: 5px; /* Poziție deasupra butonului */
+    right: 10px; /* Poziție la dreapta butonului */
+    background-color: #000000; /* Culoare roșie pentru evidențiere */
+    color: #ffffff; /* Text alb */
+    border-radius: 50%; /* Face cercul rotund */
+    padding: 2px 6px; /* Spațiere internă */
+    font-size: 12px; /* Dimensiune text */
+    line-height: 1; /* Aliniere verticală */
+    min-width: 18px; /* Lățime minimă */
+    text-align: center; /* Centrează textul */
+}
+
+
+
+
 
 #portfolio-flters li:hover,
 #portfolio-flters li.active {
