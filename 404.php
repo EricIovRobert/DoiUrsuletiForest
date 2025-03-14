@@ -1,3 +1,6 @@
+<?php
+session_start(); // Mută session_start() aici, la început
+?>
 <!DOCTYPE html>
 <html lang="en">
 

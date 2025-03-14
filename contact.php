@@ -1,3 +1,6 @@
+<?php
+session_start(); // Mută session_start() aici, la început
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -117,13 +120,9 @@
           <a href="project.php" class="nav-item nav-link">Project</a>
           <a href="contact.php" class="nav-item nav-link active">Contact</a>
         </div>
-        <a
-          href="cart.php"
-          class="btn btn-primary py-4 px-lg-5 d-none d-lg-block position-relative"
-        >
-          <i class="fa fa-shopping-cart me-3"></i> Go to Cart
-          <span class="cart-count">2</span>
-          <!-- Aici setezi numărul inițial (ex. 2) -->
+        <a href="cart.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block position-relative">
+                <i class="fa fa-shopping-cart me-3"></i> Go to Cart
+                <span class="cart-count"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; ?></span>
         </a>
       </div>
     </nav>
