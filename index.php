@@ -74,7 +74,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="img/logo.png" alt="Logo" style="width: 120px; height: auto;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -82,13 +82,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="index.php" class="nav-item nav-link active">Home</a>
+                <a href="about.php" class="nav-item nav-link">About</a>
                 <a href="service.php" class="nav-item nav-link">Produse</a>
-                <a href="project.html" class="nav-item nav-link">Project</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="project.php" class="nav-item nav-link">Project</a>
+                <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="cart.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block position-relative">
+            <a href="cart.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block position-relative">
                 <i class="fa fa-shopping-cart me-3"></i> Go to Cart
                 <span class="cart-count">2</span> <!-- Aici setezi numărul inițial (ex. 2) -->
             </a>
@@ -441,7 +441,7 @@
         </div>
         <div class="container" id="jos">
             <div class="copyright" id="jos2">
-                    <p> &copy; <a class="border-bottom" href="index.html">Doi Ursuleti Forest</a>, All Right Reserved.</p>
+                    <p> &copy; <a class="border-bottom" href="index.php">Doi Ursuleti Forest</a>, All Right Reserved.</p>
             </div>
             </div>
         </div>

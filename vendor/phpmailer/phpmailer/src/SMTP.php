@@ -13,7 +13,7 @@
  * @copyright 2012 - 2020 Marcus Bointon
  * @copyright 2010 - 2012 Jim Jagielski
  * @copyright 2004 - 2009 Andy Prevost
- * @license   https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html GNU Lesser General Public License
+ * @license   https://www.gnu.org/licenses/old-licenses/lgpl-2.1.php GNU Lesser General Public License
  * @note      This program is distributed in the hope that it will be useful - WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
  * FITNESS FOR A PARTICULAR PURPOSE.
@@ -153,7 +153,7 @@ class SMTP
      * Whether to use VERP.
      *
      * @see https://en.wikipedia.org/wiki/Variable_envelope_return_path
-     * @see https://www.postfix.org/VERP_README.html Info on VERP
+     * @see https://www.postfix.org/VERP_README.php Info on VERP
      *
      * @var bool
      */
@@ -202,7 +202,7 @@ class SMTP
      * Allowed SMTP XCLIENT attributes.
      * Must be allowed by the SMTP server. EHLO response is not checked.
      *
-     * @see https://www.postfix.org/XCLIENT_README.html
+     * @see https://www.postfix.org/XCLIENT_README.php
      *
      * @var array
      */
