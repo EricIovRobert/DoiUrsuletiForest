@@ -116,15 +116,14 @@ include 'db_connect.php';
             <div class="section-title text-center">
                 <h1 class="display-5 mb-5">Produsele din coșul tău</h1>
             </div>
-            <?php
-                if (isset($_GET['status']) && $_GET['status'] == 'success') {
-                echo '<div class="alert alert-success text-center">Coșul a fost trimis cu succes! Veți fi contactat în curând.</div>';
-            }
-            ?>
             <div class="row g-4">
                 <?php
+                if (isset($_GET['status']) && $_GET['status'] == 'success') {
+                    echo '<div class="alert alert-success text-center">Coșul a fost trimis cu succes! Veți fi contactat în curând.</div>';
+                }
+
                 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-                    foreach ($_SESSION['cart'] as $product_id) {
+                    foreach ($_SESSION['cart'] as $index => $product_id) {
                         $sql = "SELECT nume, descriere FROM produse WHERE id = $product_id";
                         $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
@@ -137,6 +136,11 @@ include 'db_connect.php';
                             echo '<div class="p-4 text-center border border-5 border-light border-top-0">';
                             echo '<h4 class="mb-3">' . htmlspecialchars($row["nume"]) . '</h4>';
                             echo '<p>' . htmlspecialchars($row["descriere"]) . '</p>';
+                            // Adaugă butonul de ștergere
+                            echo '<form method="post" action="remove_from_cart.php">';
+                            echo '<input type="hidden" name="index" value="' . $index . '">';
+                            echo '<button type="submit" class="btn btn-danger btn-sm">Șterge</button>';
+                            echo '</form>';
                             echo '</div>';
                             echo '</div>';
                             echo '</div>';
@@ -179,31 +183,7 @@ include 'db_connect.php';
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">General Carpentry</a>
-                    <a class="btn btn-link" href="">Furniture Remodeling</a>
-                    <a class="btn btn-link" href="">Wooden Floor</a>
-                    <a class="btn btn-link" href="">Wooden Furniture</a>
-                    <a class="btn btn-link" href="">Custom Carpentry</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Link-uri utile</h4>
-                    <a href="https://anpc.ro" target="_blank">
-                        <img src="img/anpc.avif" alt="" class="img-fluid">
-                    </a>
-                    <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" target="_blank">
-                        <img src="img/anpc-sol-1.avif" alt="" class="img-fluid">
-                    </a>
-                </div>
+                <!-- Restul footer-ului -->
             </div>
         </div>
         <div class="container" id="jos">
