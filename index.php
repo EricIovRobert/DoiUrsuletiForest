@@ -33,6 +33,9 @@ session_start(); // Mută session_start() aici, la început
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+
+    
 </head>
 
 <body>
@@ -102,58 +105,80 @@ session_start(); // Mută session_start() aici, la început
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To WooDY</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Best Carpenter & Craftsman Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Imaginile caruselului -->
+    <div class="carousel-inner">
+      <!-- Prima imagine -->
+      <div class="carousel-item active">
+        <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-8 text-center">
+                <h5 class="text-white text-uppercase mb-3">Welcome To WooDY</h5>
+                <h1 class="display-3 text-white mb-4">Best Carpenter & Craftsman Services</h1>
+                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.</p>
+                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Read More</a>
+                <a href="" class="btn btn-light py-md-3 px-md-5">Free Quote</a>
+              </div>
             </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To WooDY</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Best Carpenter & Craftsman Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-3.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To WooDY</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Best Carpenter & Craftsman Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+      <!-- A doua imagine -->
+      <div class="carousel-item">
+        <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-8 text-center">
+                <h5 class="text-white text-uppercase mb-3">Welcome To WooDY</h5>
+                <h1 class="display-3 text-white mb-4">Best Carpenter & Craftsman Services</h1>
+                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.</p>
+                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Read More</a>
+                <a href="" class="btn btn-light py-md-3 px-md-5">Free Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- A treia imagine -->
+      <div class="carousel-item">
+        <img class="img-fluid" src="img/carousel-3.jpg" alt="">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-8 text-center">
+                <h5 class="text-white text-uppercase mb-3">Welcome To WooDY</h5>
+                <h1 class="display-3 text-white mb-4">Best Carpenter & Craftsman Services</h1>
+                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.</p>
+                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Read More</a>
+                <a href="" class="btn btn-light py-md-3 px-md-5">Free Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Carousel End -->
+    <!-- Controalele caruselului -->
+    <div class="carousel-controls">
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <ol class="carousel-indicators">
+        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+      </ol>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Carousel End -->
 
 
     <!-- Feature Start -->

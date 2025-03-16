@@ -167,8 +167,8 @@ include 'db_connect.php';
     </div>
     <!-- Cart End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -183,12 +183,39 @@ include 'db_connect.php';
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <!-- Restul footer-ului -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Services</h4>
+                    <a class="btn btn-link" href="">General Carpentry</a>
+                    <a class="btn btn-link" href="">Furniture Remodeling</a>
+                    <a class="btn btn-link" href="">Wooden Floor</a>
+                    <a class="btn btn-link" href="">Wooden Furniture</a>
+                    <a class="btn btn-link" href="">Custom Carpentry</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Link-uri utile</h4>
+                    <a href="https://anpc.ro" target="_blank">
+                        <img src="img/anpc.avif" alt="" class="img-fluid">
+                    </a>
+                    <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" target="_blank">
+                        <img src="img/anpc-sol-1.avif" alt="" class="img-fluid">
+                    </a>
+                    
+                </div>
+             
             </div>
         </div>
         <div class="container" id="jos">
             <div class="copyright" id="jos2">
-                <p>© <a class="border-bottom" href="index.php">Doi Ursuleti Forest</a>, All Right Reserved.</p>
+                    <p> &copy; <a class="border-bottom" href="index.php">Doi Ursuleti Forest</a>, All Right Reserved.</p>
+            </div>
             </div>
         </div>
     </div>
