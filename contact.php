@@ -230,7 +230,7 @@ session_start(); // Mută session_start() aici, la început
               <iframe
                 class="position-absolute w-100 h-100"
                 style="object-fit: cover"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12406.178691353229!2d24.424520017720585!3d47.71353841035583!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47364733fc0c7cf1%3A0xa0a0d0858ba87a1!2sStrada%20Cimitirului%2016%2C%20Vi%C8%99eu%20de%20Sus%20435700!5e0!3m2!1sen!2sro!4v1742252191022!5m2!1sen!2sro"
                 frameborder="0"
                 allowfullscreen=""
                 aria-hidden="false"
