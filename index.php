@@ -93,11 +93,12 @@ session_start(); // Mută session_start() aici, la început
                 <a href="service.php" class="nav-item nav-link">Produse</a>
                 <a href="project.php" class="nav-item nav-link">Project</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="cart.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block position-relative">
+                <a href="cart.php" class="btn btn-primary py-4 px-lg-5  position-relative">
                 <i class="fa fa-shopping-cart me-3"></i> Go to Cart
                 <span class="cart-count"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; ?></span>
             </a>
+            </div>
+
         </div>
     </nav>
     <!-- Navbar End -->
@@ -118,8 +119,6 @@ session_start(); // Mută session_start() aici, la început
                 <h5 class="text-white text-uppercase mb-3">Welcome To WooDY</h5>
                 <h1 class="display-3 text-white mb-4">Best Carpenter & Craftsman Services</h1>
                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.</p>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Read More</a>
-                <a href="" class="btn btn-light py-md-3 px-md-5">Free Quote</a>
               </div>
             </div>
           </div>
@@ -135,8 +134,6 @@ session_start(); // Mută session_start() aici, la început
                 <h5 class="text-white text-uppercase mb-3">Welcome To WooDY</h5>
                 <h1 class="display-3 text-white mb-4">Best Carpenter & Craftsman Services</h1>
                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.</p>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Read More</a>
-                <a href="" class="btn btn-light py-md-3 px-md-5">Free Quote</a>
               </div>
             </div>
           </div>
@@ -152,8 +149,6 @@ session_start(); // Mută session_start() aici, la început
                 <h5 class="text-white text-uppercase mb-3">Welcome To WooDY</h5>
                 <h1 class="display-3 text-white mb-4">Best Carpenter & Craftsman Services</h1>
                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.</p>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Read More</a>
-                <a href="" class="btn btn-light py-md-3 px-md-5">Free Quote</a>
               </div>
             </div>
           </div>
