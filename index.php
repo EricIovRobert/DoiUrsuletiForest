@@ -114,9 +114,8 @@ session_start(); // Mută session_start() aici, la început
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12 col-lg-8 text-center">
-                <h5 class="text-white text-uppercase mb-3">Welcome To WooDY</h5>
-                <h1 class="display-3 text-white mb-4">Best Carpenter & Craftsman Services</h1>
-                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.</p>
+                <h1 class="display-3 text-white mb-4">Lemn prelucrat</h1>
+                <p class="fs-5 fw-medium text-white mb-4 pb-2">Cherestea, Grinzi, Traverse, Covorașe</p>
               </div>
             </div>
           </div>
@@ -129,9 +128,8 @@ session_start(); // Mută session_start() aici, la început
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12 col-lg-8 text-center">
-                <h5 class="text-white text-uppercase mb-3">Welcome To WooDY</h5>
-                <h1 class="display-3 text-white mb-4">Best Carpenter & Craftsman Services</h1>
-                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.</p>
+                <h1 class="display-3 text-white mb-4">Lemn de foc</h1>
+                <p class="fs-5 fw-medium text-white mb-4 pb-2"></p>
               </div>
             </div>
           </div>
@@ -144,9 +142,8 @@ session_start(); // Mută session_start() aici, la început
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12 col-lg-8 text-center">
-                <h5 class="text-white text-uppercase mb-3">Welcome To WooDY</h5>
-                <h1 class="display-3 text-white mb-4">Best Carpenter & Craftsman Services</h1>
-                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.</p>
+                <h1 class="display-3 text-white mb-4">Produse din 2 clase</h1>
+                <p class="fs-5 fw-medium text-white mb-4 pb-2">rășinoase și esenta tare</p>
               </div>
             </div>
           </div>
@@ -228,7 +225,7 @@ session_start(); // Mută session_start() aici, la început
     <div class="container-xxl py-5">
         <div class="container">
             <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Our Services</h1>
+                <h1 class="display-5 mb-5">Servicii oferite</h1>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -237,8 +234,8 @@ session_start(); // Mută session_start() aici, la început
                             <img class="img-fluid" src="img/service-1.jpg" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">General Carpentry</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <h4 class="mb-3">Lemn prelucrat</h4>
+                            <p>Vindem lemn prelucrat, orice dimensiune, la cerere.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -249,8 +246,8 @@ session_start(); // Mută session_start() aici, la început
                             <img class="img-fluid" src="img/service-2.jpg" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Furniture Manufacturing</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <h4 class="mb-3">Lemn de foc</h4>
+                            <p>Oferim lemne de foc de vânzare, cu sau fără paletare.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div> 
@@ -261,8 +258,8 @@ session_start(); // Mută session_start() aici, la început
                             <img class="img-fluid" src="img/service-3.jpg" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Furniture Remodeling</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <h4 class="mb-3">Rumeguș</h4>
+                            <p>Punem la dispoziție rumeguș, comercializat la tonă.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -273,8 +270,8 @@ session_start(); // Mută session_start() aici, la început
                             <img class="img-fluid" src="img/service-4.jpg" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Wooden Floor</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <h4 class="mb-3">Rășinoase</h4>
+                            <p>Procesăm rășinoase precum brad și molid.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -285,8 +282,8 @@ session_start(); // Mută session_start() aici, la început
                             <img class="img-fluid" src="img/service-5.jpg" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Wooden Furniture</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <h4 class="mb-3">Esență tare</h4>
+                            <p>Procesăm esențe tari precum fag, stejar (gorun și cer).</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -316,9 +313,9 @@ session_start(); // Mută session_start() aici, la început
                 <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Why Choose Us</h1>
+                            <h1 class="display-5 mb-4">De ce noi?</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">Echipă calificată: tehnicieni silvici, ingineri, operatori cherestea. Activăm din 2018 în exploatare forestieră, cu creștere constantă și clienți de top. Din 2024, deținem o linie Primultini 1300 (40-60 mc lemn brut), susținută de exploatare proprie și furnizori. Produse FSC: rășinoase (molid, brad), esențe tari (stejar, fag), orice dimensiune.</p>
                         <div class="row g-4">
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
@@ -438,11 +435,11 @@ session_start(); // Mută session_start() aici, la început
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">General Carpentry</a>
-                    <a class="btn btn-link" href="">Furniture Remodeling</a>
-                    <a class="btn btn-link" href="">Wooden Floor</a>
-                    <a class="btn btn-link" href="">Wooden Furniture</a>
-                    <a class="btn btn-link" href="">Custom Carpentry</a>
+                    <a class="btn btn-link" href="">Lemn prelucrat</a>
+                    <a class="btn btn-link" href="">Lemn de foc</a>
+                    <a class="btn btn-link" href="">Rumeguș</a>
+                    <a class="btn btn-link" href="">Rășinoase</a>
+                    <a class="btn btn-link" href="">Esență tare</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>

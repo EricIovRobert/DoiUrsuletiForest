@@ -61,38 +61,28 @@ session_start(); // Mută session_start() aici, la început
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0">
-      <div class="row gx-0 d-none d-lg-flex">
-        <div class="col-lg-7 px-5 text-start">
-          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-            <small class="fa fa-map-marker-alt text-primary me-2"></small>
-            <small>123 Street, New York, USA</small>
-          </div>
-          <div class="h-100 d-inline-flex align-items-center py-3">
-            <small class="far fa-clock text-primary me-2"></small>
-            <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-          </div>
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Vișeu de Sus, Maramureș, str.Cimitirului, nr.16A</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>LUNI-VINERI 08-17 SAMBATA 08-13</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>tehnician silvic: 0742900678</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>manager transport: 0742649793</small>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-5 px-5 text-end">
-          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-            <small class="fa fa-phone-alt text-primary me-2"></small>
-            <small>+012 345 6789</small>
-          </div>
-          <div class="h-100 d-inline-flex align-items-center">
-            <a class="btn btn-sm-square bg-white text-primary me-1" href=""
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a class="btn btn-sm-square bg-white text-primary me-1" href=""
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a class="btn btn-sm-square bg-white text-primary me-1" href=""
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a class="btn btn-sm-square bg-white text-primary me-0" href=""
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- Topbar End -->
 
@@ -132,19 +122,6 @@ session_start(); // Mută session_start() aici, la început
     <div class="container-fluid page-header py-5 mb-5">
       <div class="container py-5">
         <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a class="text-white" href="#">Home</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a class="text-white" href="#">Pages</a>
-            </li>
-            <li class="breadcrumb-item text-white active" aria-current="page">
-              About
-            </li>
-          </ol>
-        </nav>
       </div>
     </div>
     <!-- Page Header End -->
@@ -161,7 +138,7 @@ session_start(); // Mută session_start() aici, la început
               >
                 <i class="fa fa-user-check fa-2x text-primary"></i>
               </div>
-              <h1 class="display-1 text-light mb-0">01</h1>
+              <h1 class="display-1 text-light mb-0">1</h1>
             </div>
             <h5>Creative Designers</h5>
           </div>
@@ -173,7 +150,7 @@ session_start(); // Mută session_start() aici, la început
               >
                 <i class="fa fa-check fa-2x text-primary"></i>
               </div>
-              <h1 class="display-1 text-light mb-0">02</h1>
+              <h1 class="display-1 text-light mb-0">2</h1>
             </div>
             <h5>Quality Products</h5>
           </div>
@@ -185,7 +162,7 @@ session_start(); // Mută session_start() aici, la început
               >
                 <i class="fa fa-drafting-compass fa-2x text-primary"></i>
               </div>
-              <h1 class="display-1 text-light mb-0">03</h1>
+              <h1 class="display-1 text-light mb-0">3</h1>
             </div>
             <h5>Free Consultation</h5>
           </div>
@@ -197,7 +174,7 @@ session_start(); // Mută session_start() aici, la început
               >
                 <i class="fa fa-headphones fa-2x text-primary"></i>
               </div>
-              <h1 class="display-1 text-light mb-0">04</h1>
+              <h1 class="display-1 text-light mb-0">4</h1>
             </div>
             <h5>Customer Support</h5>
           </div>
@@ -229,159 +206,14 @@ session_start(); // Mută session_start() aici, la început
                 <h1 class="display-5 mb-4">About Us</h1>
               </div>
               <p class="mb-4 pb-2">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo erat amet
+              Societatea este pe piata din 2018, începând cu domeniul de activitate exploatare forestier. Pe parcurs se poate observa un trend ascendent al societatii, colaborând cu clienti de top, afacerea noastra a avut nevoie de urmatorul pas,  ne-am dorit sa evoluam si sa dezvoltam afacerea pe termen cat mai lung. Astfel in 2024 am achizitionat o linie de debitare Primultini 1300, care debiteaza un volum de 40-60mc material lemnos brut, depinzând de specia lemnului. In continuare avem si ramura de exploatare forestiera care ne ajuta sa alimentam linia de debitare dar achizitionam si de la furnizori. Produsele noastre sunt certificate FSC
               </p>
-              <div class="row g-4 mb-4 pb-2">
-                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="d-flex align-items-center">
-                    <div
-                      class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
-                      style="width: 60px; height: 60px"
-                    >
-                      <i class="fa fa-users fa-2x text-primary"></i>
-                    </div>
-                    <div class="ms-3">
-                      <h2 class="text-primary mb-1" data-toggle="counter-up">
-                        1234
-                      </h2>
-                      <p class="fw-medium mb-0">Happy Clients</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                  <div class="d-flex align-items-center">
-                    <div
-                      class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
-                      style="width: 60px; height: 60px"
-                    >
-                      <i class="fa fa-check fa-2x text-primary"></i>
-                    </div>
-                    <div class="ms-3">
-                      <h2 class="text-primary mb-1" data-toggle="counter-up">
-                        1234
-                      </h2>
-                      <p class="fw-medium mb-0">Projects Done</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a href="" class="btn btn-primary py-3 px-5">Explore More</a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- About End -->
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="section-title text-center">
-          <h1 class="display-5 mb-5">Team Members</h1>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="overflow-hidden position-relative">
-                <img class="img-fluid" src="img/team-1.jpg" alt="" />
-                <div class="team-social">
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </div>
-              </div>
-              <div
-                class="text-center border border-5 border-light border-top-0 p-4"
-              >
-                <h5 class="mb-0">Full Name</h5>
-                <small>Designation</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="team-item">
-              <div class="overflow-hidden position-relative">
-                <img class="img-fluid" src="img/team-2.jpg" alt="" />
-                <div class="team-social">
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </div>
-              </div>
-              <div
-                class="text-center border border-5 border-light border-top-0 p-4"
-              >
-                <h5 class="mb-0">Full Name</h5>
-                <small>Designation</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="team-item">
-              <div class="overflow-hidden position-relative">
-                <img class="img-fluid" src="img/team-3.jpg" alt="" />
-                <div class="team-social">
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </div>
-              </div>
-              <div
-                class="text-center border border-5 border-light border-top-0 p-4"
-              >
-                <h5 class="mb-0">Full Name</h5>
-                <small>Designation</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-            <div class="team-item">
-              <div class="overflow-hidden position-relative">
-                <img class="img-fluid" src="img/team-4.jpg" alt="" />
-                <div class="team-social">
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a class="btn btn-square" href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </div>
-              </div>
-              <div
-                class="text-center border border-5 border-light border-top-0 p-4"
-              >
-                <h5 class="mb-0">Full Name</h5>
-                <small>Designation</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Team End -->
 
 
     <!-- Footer Start -->
@@ -390,23 +222,19 @@ session_start(); // Mută session_start() aici, la început
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Sediu: Vișeu de Sus, Maramureș, str.Cimitirului, nr.16A</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Fabrica: Ilia, Hunedoara, str.Unirii, nr.103A</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0742900678</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0742649793</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>doiursuletiforest@gmail.com</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">General Carpentry</a>
-                    <a class="btn btn-link" href="">Furniture Remodeling</a>
-                    <a class="btn btn-link" href="">Wooden Floor</a>
-                    <a class="btn btn-link" href="">Wooden Furniture</a>
-                    <a class="btn btn-link" href="">Custom Carpentry</a>
+                    <a class="btn btn-link" href="">Lemn prelucrat</a>
+                    <a class="btn btn-link" href="">Lemn de foc</a>
+                    <a class="btn btn-link" href="">Rumeguș</a>
+                    <a class="btn btn-link" href="">Rășinoase</a>
+                    <a class="btn btn-link" href="">Esență tare</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
