@@ -165,6 +165,27 @@ include 'db_connect.php';
     </div>
     <!-- Cart End -->
 
+<!-- Contact Section Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="p-4 text-center ">
+                        <h4 class="mb-3">Detalii de contact</h4>
+                        <p><i class="fa fa-phone-alt me-3"></i>Tehnician silvic: 0742900678</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>Manager transport: 0742649793</p>
+                        <p><i class="fa fa-envelope me-3"></i>doiursuletiforest@gmail.com</p>
+                        <p>Dacă ai întrebări sau preferi să plasezi comanda direct, nu ezita să ne contactezi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact Section End -->
+
+
        <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
