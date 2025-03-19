@@ -42,8 +42,8 @@ include 'db_connect.php';
     </div>
     <!-- Spinner End -->
 
-   <!-- Topbar Start -->
-   <div class="container-fluid bg-light p-0">
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
@@ -120,30 +120,38 @@ include 'db_connect.php';
                 }
 
                 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-                    foreach ($_SESSION['cart'] as $index => $product_id) {
-                        $sql = "SELECT nume, descriere FROM produse WHERE id = $product_id";
-                        $result = $conn->query($sql);
-                        if ($result->num_rows > 0) {
-                            $row = $result->fetch_assoc();
-                            echo '<div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">';
-                            echo '<div class="service-item">';
-                            echo '<div class="overflow-hidden">';
-                            echo '<img class="img-fluid" src="img/service-1.jpg" alt="' . htmlspecialchars($row["nume"]) . '">';
-                            echo '</div>';
-                            echo '<div class="p-4 text-center border border-5 border-light border-top-0">';
-                            echo '<h4 class="mb-3">' . htmlspecialchars($row["nume"]) . '</h4>';
-                            echo '<p>' . htmlspecialchars($row["descriere"]) . '</p>';
-                            // Adaugă butonul de ștergere
-                            echo '<form method="post" action="remove_from_cart.php">';
-                            echo '<input type="hidden" name="index" value="' . $index . '">';
-                            echo '<button type="submit" class="btn btn-danger btn-sm">Șterge</button>';
-                            echo '</form>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</div>';
+                    foreach ($_SESSION['cart'] as $index => $item) {
+                        // Each $item is now an array with all the details
+                        echo '<div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">';
+                        echo '<div class="service-item">';
+                        echo '<div class="overflow-hidden">';
+                        echo '<img class="img-fluid" src="img/service-1.jpg" alt="' . htmlspecialchars($item["product_name"]) . '">';
+                        echo '</div>';
+                        echo '<div class="p-4 text-center border border-5 border-light border-top-0">';
+                        echo '<h4 class="mb-3">' . htmlspecialchars($item["product_name"]) . '</h4>';
+                        // Display all selected details
+                        echo '<p><strong>Tip lemn:</strong> ' . htmlspecialchars($item["tip_lemn"]) . '</p>';
+                        echo '<p><strong>Clasă calitate:</strong> ' . htmlspecialchars($item["clasa_calitate"]) . '</p>';
+                        if (!empty($item["dimensiuni"])) {
+                            echo '<p><strong>Dimensiuni:</strong> ' . htmlspecialchars($item["dimensiuni"]) . '</p>';
                         }
+                        if (!empty($item["subcategorie"])) {
+                            echo '<p><strong>Subcategorie:</strong> ' . htmlspecialchars($item["subcategorie"]) . '</p>';
+                        }
+                        if (!empty($item["cantitate"])) {
+                            echo '<p><strong>Cantitate (tone):</strong> ' . htmlspecialchars($item["cantitate"]) . '</p>';
+                        }
+                        echo '<p><strong>Număr de unități:</strong> ' . htmlspecialchars($item["quantity"]) . '</p>';
+                        // Remove button
+                        echo '<form method="post" action="remove_from_cart.php">';
+                        echo '<input type="hidden" name="index" value="' . $index . '">';
+                        echo '<button type="submit" class="btn btn-danger btn-sm">Șterge</button>';
+                        echo '</form>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
                     }
-                    echo '</div>'; // Închide row-ul
+                    echo '</div>'; // Close row
                     echo '<form method="post" action="send_cart.php" class="mt-5">';
                     echo '<div class="row g-3">';
                     echo '<div class="col-12 col-sm-6">';
@@ -164,28 +172,27 @@ include 'db_connect.php';
     </div>
     <!-- Cart End -->
 
-<!-- Contact Section Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item">
-                    <div class="p-4 text-center ">
-                        <h4 class="mb-3">Detalii de contact</h4>
-                        <p><i class="fa fa-phone-alt me-3"></i>Tehnician silvic: 0742900678</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>Manager transport: 0742649793</p>
-                        <p><i class="fa fa-envelope me-3"></i>doiursuletiforest@gmail.com</p>
-                        <p>Dacă ai întrebări sau preferi să plasezi comanda direct, nu ezita să ne contactezi.</p>
+    <!-- Contact Section Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <div class="p-4 text-center ">
+                            <h4 class="mb-3">Detalii de contact</h4>
+                            <p><i class="fa fa-phone-alt me-3"></i>Tehnician silvic: 0742900678</p>
+                            <p><i class="fa fa-phone-alt me-3"></i>Manager transport: 0742649793</p>
+                            <p><i class="fa fa-envelope me-3"></i>doiursuletiforest@gmail.com</p>
+                            <p>Dacă ai întrebări sau preferi să plasezi comanda direct, nu ezita să ne contactezi.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Contact Section End -->
+    <!-- Contact Section End -->
 
-
-       <!-- Footer Start -->
+    <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -221,15 +228,12 @@ include 'db_connect.php';
                     <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" target="_blank">
                         <img src="img/anpc-sol-1.avif" alt="" class="img-fluid">
                     </a>
-                    
                 </div>
-             
             </div>
         </div>
         <div class="container" id="jos">
             <div class="copyright" id="jos2">
-                    <p> &copy; <a class="border-bottom" href="index.php">Doi Ursuleti Forest</a>, All Right Reserved.</p>
-            </div>
+                <p> © <a class="border-bottom" href="index.php">Doi Ursuleti Forest</a>, All Right Reserved.</p>
             </div>
         </div>
     </div>

@@ -4,7 +4,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
-include 'db_connect.php';
 
 if (isset($_POST['email']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     $user_email = $_POST['email']; // Emailul introdus de utilizator
@@ -17,7 +16,7 @@ if (isset($_POST['email']) && isset($_SESSION['cart']) && !empty($_SESSION['cart
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'emailul-tau@gmail.com'; // Emailul tău Gmail
-        $mail->Password = 'parola-ta-app'; // Parola de aplicație (vezi mai jos cum să o obții)
+        $mail->Password = 'parola-ta-app'; // Parola de aplicație
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
@@ -32,13 +31,23 @@ if (isset($_POST['email']) && isset($_SESSION['cart']) && !empty($_SESSION['cart
         $mail->Body .= '<p>Email client: ' . htmlspecialchars($user_email) . '</p>';
         $mail->Body .= '<h2>Produse comandate:</h2><ul>';
 
-        foreach ($_SESSION['cart'] as $product_id) {
-            $sql = "SELECT nume FROM produse WHERE id = $product_id";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-                $mail->Body .= '<li>' . htmlspecialchars($row['nume']) . '</li>';
+        // Parcurgem coșul și adăugăm detaliile fiecărui produs
+        foreach ($_SESSION['cart'] as $item) {
+            $mail->Body .= '<li>';
+            $mail->Body .= '<strong>' . htmlspecialchars($item['product_name']) . '</strong><br>';
+            $mail->Body .= 'Tip lemn: ' . htmlspecialchars($item['tip_lemn']) . '<br>';
+            $mail->Body .= 'Clasă calitate: ' . htmlspecialchars($item['clasa_calitate']) . '<br>';
+            if (!empty($item['dimensiuni'])) {
+                $mail->Body .= 'Dimensiuni: ' . htmlspecialchars($item['dimensiuni']) . '<br>';
             }
+            if (!empty($item['subcategorie'])) {
+                $mail->Body .= 'Subcategorie: ' . htmlspecialchars($item['subcategorie']) . '<br>';
+            }
+            if (!empty($item['cantitate'])) {
+                $mail->Body .= 'Cantitate: ' . htmlspecialchars($item['cantitate']) . ' tone<br>';
+            }
+            $mail->Body .= 'Număr de unități: ' . htmlspecialchars($item['quantity']) . '<br>';
+            $mail->Body .= '</li>';
         }
         $mail->Body .= '</ul>';
 
@@ -53,5 +62,4 @@ if (isset($_POST['email']) && isset($_SESSION['cart']) && !empty($_SESSION['cart
 } else {
     echo "Coșul este gol sau emailul lipsește.";
 }
-$conn->close();
 ?>
