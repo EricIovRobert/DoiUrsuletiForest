@@ -104,42 +104,114 @@ session_start(); // Mută session_start() aici, la început
     </div>
     <!-- Page Header End -->
 
-    <!-- Product Details Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <?php
-            include 'db_connect.php';
-            if (isset($_GET['id'])) {
-                $id = $_GET['id'];
-                $sql = "SELECT nume, descriere FROM produse WHERE id = $id";
-                $result = $conn->query($sql);
+<!-- Product Details Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <?php
+        include 'db_connect.php';
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $sql = "SELECT * FROM produse WHERE id = $id";
+            $result = $conn->query($sql);
+            
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                echo '<div class="row g-4">';
+                echo '<div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
+                echo '<img class="img-fluid" src="img/service-1.jpg" alt="' . htmlspecialchars($row["nume"]) . '">';
+                echo '</div>';
+                echo '<div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">';
+                echo '<h1 class="display-5 mb-3">' . htmlspecialchars($row["nume"]) . '</h1>';
                 
-                if ($result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                    echo '<div class="row g-4">';
-                    echo '<div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
-                    echo '<img class="img-fluid" src="img/service-1.jpg" alt="' . htmlspecialchars($row["nume"]) . '">';
-                    echo '</div>';
-                    echo '<div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">';
-                    echo '<h1 class="display-5 mb-3">' . htmlspecialchars($row["nume"]) . '</h1>';
-                    echo '<p>' . htmlspecialchars($row["descriere"]) . '</p>';
-                    echo '<form method="post" action="add_to_cart.php">';
-                    echo '<input type="hidden" name="product_id" value="' . $id . '">';
-                    echo '<button type="submit" class="btn btn-primary py-2 px-4">Adaugă în coș</button>';
-                    echo '</form>';
-                    echo '</div>';
-                    echo '</div>';
-                } else {
-                    echo '<p>Produsul nu a fost găsit.</p>';
+                // Display general product details
+                echo '<p><strong>Tip produs:</strong> ' . htmlspecialchars($row["product_type"]) . '</p>';
+                if ($row["subcategorie"]) {
+                    echo '<p><strong>Subcategorie:</strong> ' . htmlspecialchars($row["subcategorie"]) . '</p>';
                 }
+                echo '<p><strong>Clasă lemn:</strong> ' . htmlspecialchars($row["clasa_lemn"]) . '</p>';
+                echo '<p><strong>Descriere:</strong> ' . htmlspecialchars($row["descriere"]) . '</p>';
+
+                // Form for client customization
+                echo '<form method="post" action="add_to_cart.php">';
+                echo '<input type="hidden" name="product_id" value="' . $id . '">';
+                echo '<input type="hidden" name="product_name" value="' . htmlspecialchars($row["nume"]) . '">';
+
+                // Dropdown for Wood Type
+                echo '<div class="mb-3">';
+                echo '<label for="tip_lemn" class="form-label"><strong>Selectați tipul de lemn:</strong></label>';
+                echo '<select class="form-select" id="tip_lemn" name="tip_lemn" required>';
+                echo '<option value="">Alegeți tipul de lemn</option>';
+                if ($row["clasa_lemn"] == 'Rășinoase') {
+                    echo '<option value="Brad">Brad</option>';
+                    echo '<option value="Molid">Molid</option>';
+                } else {
+                    echo '<option value="Fag">Fag</option>';
+                    echo '<option value="Stejar Gorun">Stejar Gorun</option>';
+                    echo '<option value="Stejar Cer">Stejar Cer</option>';
+                }
+                echo '</select>';
+                echo '</div>';
+
+                // Dropdown for Quality Class
+                echo '<div class="mb-3">';
+                echo '<label for="clasa_calitate" class="form-label"><strong>Selectați clasa de calitate:</strong></label>';
+                echo '<select class="form-select" id="clasa_calitate" name="clasa_calitate" required>';
+                echo '<option value="">Alegeți o clasă</option>';
+                echo '<option value="A">A</option>';
+                echo '<option value="B">B</option>';
+                echo '<option value="C">C</option>';
+                echo '</select>';
+                echo '</div>';
+
+                // Custom Dimensions Input (for Lemn prelucrat and Lemn de foc)
+                if ($row["product_type"] != 'Rumeguș') {
+                    echo '<div class="mb-3">';
+                    echo '<label for="dimensiuni" class="form-label"><strong>Introduceți dimensiunile dorite (ex. 2m x 15cm x 5cm):</strong></label>';
+                    echo '<input type="text" class="form-control" id="dimensiuni" name="dimensiuni" placeholder="ex. 2m x 15cm x 5cm" required>';
+                    echo '</div>';
+                }
+
+                // Dropdown for Paletat/Non-paletat (for Lemn de foc only)
+                if ($row["product_type"] == 'Lemn de foc') {
+                    echo '<div class="mb-3">';
+                    echo '<label for="subcategorie" class="form-label"><strong>Paletat:</strong></label>';
+                    echo '<select class="form-select" id="subcategorie" name="subcategorie" required>';
+                    echo '<option value="">Alegeți o opțiune</option>';
+                    echo '<option value="Paletat">Paletat</option>';
+                    echo '<option value="Non-paletat">Non-paletat</option>';
+                    echo '</select>';
+                    echo '</div>';
+                }
+
+                // Quantity Input (for Rumeguș only, in tons)
+                if ($row["product_type"] == 'Rumeguș') {
+                    echo '<div class="mb-3">';
+                    echo '<label for="cantitate" class="form-label"><strong>Cantitate (tone):</strong></label>';
+                    echo '<input type="number" class="form-control" id="cantitate" name="cantitate" step="0.01" min="0" placeholder="ex. 5.50" required>';
+                    echo '</div>';
+                }
+
+                // Quantity Input (for the number of units)
+                echo '<div class="mb-3">';
+                echo '<label for="quantity" class="form-label"><strong>Cantitate (număr de unități):</strong></label>';
+                echo '<input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1" required>';
+                echo '</div>';
+
+                echo '<button type="submit" class="btn btn-primary py-2 px-4">Adaugă în coș</button>';
+                echo '</form>';
+                echo '</div>';
+                echo '</div>';
             } else {
-                echo '<p>ID-ul produsului lipsește.</p>';
+                echo '<p>Produsul nu a fost găsit.</p>';
             }
-            $conn->close();
-            ?>
-        </div>
+        } else {
+            echo '<p>ID-ul produsului lipsește.</p>';
+        }
+        $conn->close();
+        ?>
     </div>
-    <!-- Product Details End -->
+</div>
+<!-- Product Details End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
