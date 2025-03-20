@@ -25,7 +25,7 @@ if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['email']) &&
     $client_name = $_POST['name'];
     $client_phone = $_POST['phone'];
     $client_email = $_POST['email'];
-    $firma_email = 'wovencrib9@gmail.com'; // Emailul firmei
+    $firma_email = 'wovencrib9@gmail.com'; // Emailul firmei trebuie modificat la cei de la doiursuleti
 
     // Validate email input
     if (!filter_var($client_email, FILTER_VALIDATE_EMAIL)) {
