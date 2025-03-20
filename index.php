@@ -107,48 +107,50 @@ session_start(); // Mută session_start() aici, la început
     <!-- Imaginile caruselului -->
     <div class="carousel-inner">
       <!-- Prima imagine -->
-      <div class="carousel-item active">
-        <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-lg-8 text-center">
-                <h1 class="display-3 text-white mb-4">Lemn prelucrat</h1>
-                <p class="fs-5 fw-medium text-white mb-4 pb-2">Cherestea, Grinzi, Traverse, Covorașe</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- A doua imagine -->
-      <div class="carousel-item">
-        <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-lg-8 text-center">
-                <h1 class="display-3 text-white mb-4">Lemn de foc</h1>
-                <p class="fs-5 fw-medium text-white mb-4 pb-2"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- A treia imagine -->
-      <div class="carousel-item">
-        <img class="img-fluid" src="img/carousel-3.jpg" alt="">
-        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-lg-8 text-center">
-                <h1 class="display-3 text-white mb-4">Produse din 2 clase</h1>
-                <p class="fs-5 fw-medium text-white mb-4 pb-2">rășinoase și esenta tare</p>
-              </div>
-            </div>
-          </div>
+<div class="carousel-item active">
+  <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 text-center">
+          <h1 class="display-3 text-white mb-4">Lemn prelucrat premium</h1>
+          <p class="fs-5 fw-medium text-white mb-4 pb-2">Calitate superioară pentru construcții solide și durabile!</p>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- A doua imagine -->
+<div class="carousel-item">
+  <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 text-center">
+          <h1 class="display-3 text-white mb-4">Lemn de foc uscat</h1>
+          <p class="fs-5 fw-medium text-white mb-4 pb-2">Arde eficient și oferă căldură de lungă durată!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- A treia imagine -->
+<div class="carousel-item">
+  <img class="img-fluid" src="img/imagine3.avif" alt="">
+  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 text-center">
+          <h1 class="display-3 text-white mb-4">Esențe tari și rășinoase</h1>
+          <p class="fs-5 fw-medium text-white mb-4 pb-2">Alege lemnul potrivit pentru fiecare proiect!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- Controalele caruselului -->
     <div class="carousel-controls">
       <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
