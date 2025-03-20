@@ -125,10 +125,10 @@ include 'db_connect.php';
                         echo '<div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">';
                         echo '<div class="service-item">';
                         echo '<div class="overflow-hidden">';
-                        echo '<img class="img-fluid" src="img/service-1.jpg" alt="' . htmlspecialchars($item["product_name"]) . '">';
+                        echo '<img class="img-fluid" src="img/service-1.jpg" alt="' . htmlspecialchars($item["nume"]) . '">';
                         echo '</div>';
                         echo '<div class="p-4 text-center border border-5 border-light border-top-0">';
-                        echo '<h4 class="mb-3">' . htmlspecialchars($item["product_name"]) . '</h4>';
+                        echo '<h4 class="mb-3">' . htmlspecialchars($item["nume"]) . '</h4>'; // Changed to 'nume'
                         // Display all selected details
                         echo '<p><strong>Tip lemn:</strong> ' . htmlspecialchars($item["tip_lemn"]) . '</p>';
                         echo '<p><strong>Clasă calitate:</strong> ' . htmlspecialchars($item["clasa_calitate"]) . '</p>';
@@ -155,6 +155,12 @@ include 'db_connect.php';
                     echo '<form method="post" action="send_cart.php" class="mt-5">';
                     echo '<div class="row g-3">';
                     echo '<div class="col-12 col-sm-6">';
+                    echo '<input type="text" name="name" class="form-control border-0" placeholder="Numele tău" style="height: 55px" required>';
+                    echo '</div>';
+                    echo '<div class="col-12 col-sm-6">';
+                    echo '<input type="tel" name="phone" class="form-control border-0" placeholder="Numărul tău de telefon" style="height: 55px" required>';
+                    echo '</div>';
+                    echo '<div class="col-12 col-sm-6">';
                     echo '<input type="email" name="email" class="form-control border-0" placeholder="Adresa ta de email" style="height: 55px" required>';
                     echo '</div>';
                     echo '<div class="col-12 col-sm-6">';
@@ -178,7 +184,7 @@ include 'db_connect.php';
             <div class="row g-4">
                 <div class="col-md-12 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
-                        <div class="p-4 text-center ">
+                        <div class="p-4 text-center">
                             <h4 class="mb-3">Detalii de contact</h4>
                             <p><i class="fa fa-phone-alt me-3"></i>Tehnician silvic: 0742900678</p>
                             <p><i class="fa fa-phone-alt me-3"></i>Manager transport: 0742649793</p>
