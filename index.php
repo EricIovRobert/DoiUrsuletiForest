@@ -183,7 +183,7 @@ session_start(); // Mută session_start() aici, la început
                         </div>
                         <h1 class="display-1 text-light mb-0">1</h1>
                     </div>
-                    <h5>Creative Designers</h5>
+                    <h5>Designeri Creativi</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -192,7 +192,7 @@ session_start(); // Mută session_start() aici, la început
                         </div>
                         <h1 class="display-1 text-light mb-0">2</h1>
                     </div>
-                    <h5>Quality Products</h5>
+                    <h5>Produse de Calitate</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -201,7 +201,7 @@ session_start(); // Mută session_start() aici, la început
                         </div>
                         <h1 class="display-1 text-light mb-0">3</h1>
                     </div>
-                    <h5>Free Consultation</h5>
+                    <h5>Consultanță Gratuită</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -210,7 +210,7 @@ session_start(); // Mută session_start() aici, la început
                         </div>
                         <h1 class="display-1 text-light mb-0">4</h1>
                     </div>
-                    <h5>Customer Support</h5>
+                    <h5>Asistență pentru Clienți</h5>
                 </div>
             </div>
         </div>
@@ -237,7 +237,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Lemn prelucrat</h4>
                             <p>Vindem lemn prelucrat, orice dimensiune, la cerere.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -249,7 +249,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Lemn de foc</h4>
                             <p>Oferim lemne de foc de vânzare, cu sau fără paletare.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div> 
                 </div>
@@ -261,7 +261,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Rumeguș</h4>
                             <p>Punem la dispoziție rumeguș, comercializat la tonă.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -273,7 +273,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Rășinoase</h4>
                             <p>Procesăm rășinoase precum brad și molid.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -285,7 +285,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Esență tare</h4>
                             <p>Procesăm esențe tari precum fag, stejar (gorun și cer).</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -297,7 +297,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Custom Work</h4>
                             <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -324,8 +324,8 @@ session_start(); // Mută session_start() aici, la început
                                         <i class="fa fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Quality</p>
-                                        <h5 class="mb-0">Services</h5>
+                                        <p class="mb-2">Calitate</p>
+                                        <h5 class="mb-0">Superioară</h5>
                                     </div>
                                 </div>
                             </div>
@@ -335,8 +335,8 @@ session_start(); // Mută session_start() aici, la început
                                         <i class="fa fa-user-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Creative</p>
-                                        <h5 class="mb-0">Designers</h5>
+                                        <p class="mb-2">Designeri</p>
+                                        <h5 class="mb-0">Creativi</h5>
                                     </div>
                                 </div>
                             </div>
@@ -346,8 +346,8 @@ session_start(); // Mută session_start() aici, la început
                                         <i class="fa fa-drafting-compass fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Free</p>
-                                        <h5 class="mb-0">Consultation</h5>
+                                        <p class="mb-2">Consultanță</p>
+                                        <h5 class="mb-0">Gratuită</h5>
                                     </div>
                                 </div>
                             </div>
@@ -357,8 +357,8 @@ session_start(); // Mută session_start() aici, la început
                                         <i class="fa fa-headphones fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Customer</p>
-                                        <h5 class="mb-0">Support</h5>
+                                        <p class="mb-2">Suport</p>
+                                        <h5 class="mb-0">Clienți</h5>
                                     </div>
                                 </div>
                             </div>
