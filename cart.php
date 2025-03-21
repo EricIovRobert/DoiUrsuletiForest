@@ -32,6 +32,17 @@ include 'db_connect.php';
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Poze -->
+    <style>
+        .service-item img {
+            height: 400px;
+            width: 100%;       /* Ocupă toată lățimea containerului */
+            object-fit: cover;
+        }
+    </style>
+
+
 </head>
 <body>
     <!-- Spinner Start -->
@@ -109,75 +120,74 @@ include 'db_connect.php';
     <!-- Page Header End -->
 
     <!-- Cart Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Produsele din coșul tău</h1>
-            </div>
-            <div class="row g-4">
-                <?php
-                if (isset($_GET['status']) && $_GET['status'] == 'success') {
-                    echo '<div class="alert alert-success text-center">Coșul a fost trimis cu succes! Veți fi contactat în curând.</div>';
-                }
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="section-title text-center">
+            <h1 class="display-5 mb-5">Produsele din coșul tău</h1>
+        </div>
+        <div class="row g-4">
+            <?php
+            if (isset($_GET['status']) && $_GET['status'] == 'success') {
+                echo '<div class="alert alert-success text-center">Coșul a fost trimis cu succes! Veți fi contactat în curând.</div>';
+            }
 
-                if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-                    foreach ($_SESSION['cart'] as $index => $item) {
-                        // Each $item is now an array with all the details
-                        echo '<div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">';
-                        echo '<div class="service-item">';
-                        echo '<div class="overflow-hidden">';
-                        echo '<img class="img-fluid" src="img/service-1.jpg" alt="' . htmlspecialchars($item["nume"]) . '">';
-                        echo '</div>';
-                        echo '<div class="p-4 text-center border border-5 border-light border-top-0">';
-                        echo '<h4 class="mb-3">' . htmlspecialchars($item["nume"]) . '</h4>'; // Changed to 'nume'
-                        // Display all selected details
-                        echo '<p><strong>Tip lemn:</strong> ' . htmlspecialchars($item["tip_lemn"]) . '</p>';
-                        echo '<p><strong>Clasă calitate:</strong> ' . htmlspecialchars($item["clasa_calitate"]) . '</p>';
-                        if (!empty($item["dimensiuni"])) {
-                            echo '<p><strong>Dimensiuni:</strong> ' . htmlspecialchars($item["dimensiuni"]) . '</p>';
-                        }
-                        if (!empty($item["subcategorie"])) {
-                            echo '<p><strong>Subcategorie:</strong> ' . htmlspecialchars($item["subcategorie"]) . '</p>';
-                        }
-                        if (!empty($item["cantitate"])) {
-                            echo '<p><strong>Cantitate (tone):</strong> ' . htmlspecialchars($item["cantitate"]) . '</p>';
-                        }
-                        echo '<p><strong>Număr de unități:</strong> ' . htmlspecialchars($item["quantity"]) . '</p>';
-                        // Remove button
-                        echo '<form method="post" action="remove_from_cart.php">';
-                        echo '<input type="hidden" name="index" value="' . $index . '">';
-                        echo '<button type="submit" class="btn btn-danger btn-sm">Șterge</button>';
-                        echo '</form>';
-                        echo '</div>';
-                        echo '</div>';
-                        echo '</div>';
+            if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+                foreach ($_SESSION['cart'] as $index => $item) {
+                    echo '<div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">';
+                    echo '<div class="service-item">';
+                    echo '<div class="overflow-hidden">';
+                    // Afișează imaginea din coș folosind imagine_path
+                    echo '<img class="img-fluid" src="' . htmlspecialchars($item['imagine_path']) . '" alt="' . htmlspecialchars($item['nume']) . '">';
+                    echo '</div>';
+                    echo '<div class="p-4 text-center border border-5 border-light border-top-0">';
+                    echo '<h4 class="mb-3">' . htmlspecialchars($item['nume']) . '</h4>';
+                    echo '<p><strong>Tip lemn:</strong> ' . htmlspecialchars($item['tip_lemn']) . '</p>';
+                    echo '<p><strong>Clasă calitate:</strong> ' . htmlspecialchars($item['clasa_calitate']) . '</p>';
+                    if (!empty($item['dimensiuni'])) {
+                        echo '<p><strong>Dimensiuni:</strong> ' . htmlspecialchars($item['dimensiuni']) . '</p>';
                     }
-                    echo '</div>'; // Close row
-                    echo '<form method="post" action="send_cart.php" class="mt-5">';
-                    echo '<div class="row g-3">';
-                    echo '<div class="col-12 col-sm-6">';
-                    echo '<input type="text" name="name" class="form-control border-0" placeholder="Numele tău" style="height: 55px" required>';
-                    echo '</div>';
-                    echo '<div class="col-12 col-sm-6">';
-                    echo '<input type="tel" name="phone" class="form-control border-0" placeholder="Numărul tău de telefon" style="height: 55px" required>';
-                    echo '</div>';
-                    echo '<div class="col-12 col-sm-6">';
-                    echo '<input type="email" name="email" class="form-control border-0" placeholder="Adresa ta de email" style="height: 55px" required>';
-                    echo '</div>';
-                    echo '<div class="col-12 col-sm-6">';
-                    echo '<button type="submit" class="btn btn-primary w-100 py-3">Trimite coșul</button>';
-                    echo '</div>';
-                    echo '</div>';
+                    if (!empty($item['subcategorie'])) {
+                        echo '<p><strong>Subcategorie:</strong> ' . htmlspecialchars($item['subcategorie']) . '</p>';
+                    }
+                    if (!empty($item['cantitate'])) {
+                        echo '<p><strong>Cantitate (tone):</strong> ' . htmlspecialchars($item['cantitate']) . '</p>';
+                    }
+                    echo '<p><strong>Număr de unități:</strong> ' . htmlspecialchars($item['quantity']) . '</p>';
+                    // Buton de ștergere
+                    echo '<form method="post" action="remove_from_cart.php">';
+                    echo '<input type="hidden" name="index" value="' . $index . '">';
+                    echo '<button type="submit" class="btn btn-danger btn-sm">Șterge</button>';
                     echo '</form>';
-                } else {
-                    echo '<p>Coșul tău este gol.</p>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
                 }
-                $conn->close();
-                ?>
-            </div>
+                echo '</div>'; // Închide row
+                echo '<form method="post" action="send_cart.php" class="mt-5">';
+                echo '<div class="row g-3">';
+                echo '<div class="col-12 col-sm-6">';
+                echo '<input type="text" name="name" class="form-control border-0" placeholder="Numele tău" style="height: 55px" required>';
+                echo '</div>';
+                echo '<div class="col-12 col-sm-6">';
+                echo '<input type="tel" name="phone" class="form-control border-0" placeholder="Numărul tău de telefon" style="height: 55px" required>';
+                echo '</div>';
+                echo '<div class="col-12 col-sm-6">';
+                echo '<input type="email" name="email" class="form-control border-0" placeholder="Adresa ta de email" style="height: 55px" required>';
+                echo '</div>';
+                echo '<div class="col-12 col-sm-6">';
+                echo '<button type="submit" class="btn btn-primary w-100 py-3">Trimite coșul</button>';
+                echo '</div>';
+                echo '</div>';
+                echo '</form>';
+            } else {
+                echo '<p>Coșul tău este gol.</p>';
+            }
+            $conn->close();
+            ?>
         </div>
     </div>
-    <!-- Cart End -->
+</div>
+<!-- Cart End -->
 
     <!-- Contact Section Start -->
     <div class="container-xxl py-5">

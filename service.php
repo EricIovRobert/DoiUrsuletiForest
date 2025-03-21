@@ -33,6 +33,8 @@ include 'db_connect.php'; // Include conexiunea la baza de date
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
+
+    <!-- Poze -->
     <style>
         .service-item img {
             height: 400px;
