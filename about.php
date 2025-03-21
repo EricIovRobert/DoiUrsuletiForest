@@ -155,8 +155,7 @@ session_start(); // Mută session_start() aici, la început
                 <h1 class="display-5 mb-4">Despre noi</h1>
               </div>
               <p class="mb-4 pb-2">
-              Societatea este pe piata din 2018, începând cu domeniul de activitate exploatare forestier. Pe parcurs se poate observa un trend ascendent al societatii, colaborând cu clienti de top, afacerea noastra a avut nevoie de urmatorul pas,  ne-am dorit sa evoluam si sa dezvoltam afacerea pe termen cat mai lung. Astfel in 2024 am achizitionat o linie de debitare Primultini 1300, care debiteaza un volum de 40-60mc material lemnos brut, depinzând de specia lemnului. In continuare avem si ramura de exploatare forestiera care ne ajuta sa alimentam linia de debitare dar achizitionam si de la furnizori. Produsele noastre sunt certificate FSC
-              </p>
+              Societatea este pe piață din 2018, începând cu domeniul de activitate exploatare forestier. Pe parcurs se poate observa un trend ascendent al societății, colaborând cu clienți de top, afacerea noastră a avut nevoie de următorul pas, ne-am dorit să evoluăm și să dezvoltăm afacerea pe termen cât mai lung. Astfel în 2024 am achiziționat o linie de debitare Primultini 1300, care debitează un volum de 40-60mc material lemnos brut, depinzând de specia lemnului. În continuare avem și ramură de exploatare forestieră care ne ajută să alimentăm linia de debitare dar achiziționăm și de la furnizori. Produsele noastre sunt certificate FSC.              </p>
             </div>
           </div>
         </div>

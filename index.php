@@ -53,21 +53,21 @@ session_start(); // Mută session_start() aici, la început
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>Vișeu de Sus, Maramureș, str.Cimitirului, nr.16A</small>
+                    <small>Ilia, Hunedoara, str.Unirii, nr.103A</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3">
                     <small class="far fa-clock text-primary me-2"></small>
-                    <small>LUNI-VINERI 08-17 SAMBATA 08-13</small>
+                    <small>LUNI-VINERI 08-17 SÂMBĂTĂ 08-13</small>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>tehnician silvic: 0742900678</small>
+                    <small>Tehnician silvic: 0742900678</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>manager transport: 0742649793</small>
+                    <small>Manager transport: 0742649793</small>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@ session_start(); // Mută session_start() aici, la început
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link active">Home</a>
+                <a href="index.php" class="nav-item nav-link active">Acasă</a>
                 <a href="about.php" class="nav-item nav-link">Despre noi</a>
                 <a href="service.php" class="nav-item nav-link">Produse</a>
                 <a href="project.php" class="nav-item nav-link">Proiecte</a>
@@ -429,7 +429,7 @@ session_start(); // Mută session_start() aici, la început
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Sediu: Vișeu de Sus, Maramureș, str.Cimitirului, nr.16A</p>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Fabrica: Ilia, Hunedoara, str.Unirii, nr.103A</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Fabrică: Ilia, Hunedoara, str.Unirii, nr.103A</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0742900678</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0742649793</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>doiursuletiforest@gmail.com</p>
