@@ -45,18 +45,18 @@ if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['email']) &&
     foreach ($_SESSION['cart'] as $item) {
         $message .= "------------------------\n";
         $message .= "Produs: " . (isset($item['nume']) ? htmlspecialchars($item['nume']) : 'Nume indisponibil') . "\n";
-        $message .= "Tip lemn: " . (isset($item['tip_lemn']) ? htmlspecialchars($item['tip_lemn']) : 'N/A') . "\n";
-        $message .= "Clasă calitate: " . (isset($item['clasa_calitate']) ? htmlspecialchars($item['clasa_calitate']) : 'N/A') . "\n";
+        $message .= "Clasa lemn: " . (isset($item['clasa_lemn']) ? htmlspecialchars($item['clasa_lemn']) : 'N/A') . "\n";
+        $message .= "Sortiment: " . (isset($item['sortiment']) ? htmlspecialchars($item['sortiment']) : 'N/A') . "\n";
+        if (!empty($item['clasa_calitate'])) {
+            $message .= "Clasă calitate: " . htmlspecialchars($item['clasa_calitate']) . "\n";
+        }
         if (!empty($item['dimensiuni'])) {
             $message .= "Dimensiuni: " . htmlspecialchars($item['dimensiuni']) . "\n";
         }
-        if (!empty($item['subcategorie'])) {
-            $message .= "Subcategorie: " . htmlspecialchars($item['subcategorie']) . "\n";
+        if (!empty($item['paletat'])) {
+            $message .= htmlspecialchars($item['paletat']) . "\n";
         }
-        if (!empty($item['cantitate'])) {
-            $message .= "Cantitate: " . htmlspecialchars($item['cantitate']) . " tone\n";
-        }
-        $message .= "Număr de unități: " . (isset($item['quantity']) ? htmlspecialchars($item['quantity']) : '1') . "\n";
+        $message .= "Cantitate: " . (isset($item['quantity']) ? htmlspecialchars($item['quantity']) : '1') . " " . (isset($item['unitate_masura']) ? htmlspecialchars($item['unitate_masura']) : '') . "\n";
     }
 
     // Trimitere email prin PHPMailer
@@ -66,8 +66,8 @@ if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['email']) &&
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = $_ENV['GMAIL_USERNAME']; // Load from .env
-        $mail->Password = $_ENV['GMAIL_PASSWORD']; // Load from .env
+        $mail->Username = $_ENV['GMAIL_USERNAME'];
+        $mail->Password = $_ENV['GMAIL_PASSWORD'];
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 

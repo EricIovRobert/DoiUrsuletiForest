@@ -1,5 +1,5 @@
 <?php
-session_start(); // Mută session_start() aici, la început
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,10 +33,6 @@ session_start(); // Mută session_start() aici, la început
     <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Spinner, Topbar, Navbar -->
-    <!-- Copiază codul HTML pentru Spinner, Topbar și Navbar din service.php aici -->
-    <!-- Înlocuiește doar conținutul specific al paginii -->
-
     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0">
         <div class="row gx-0 d-none d-lg-flex">
@@ -64,11 +60,10 @@ session_start(); // Mută session_start() aici, la început
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="img/logo.jpg" alt="Logo" style="width: 50px; height: 50;">
+            <img src="img/logo.jpg" alt="Logo" style="width: 50px; height: 50px;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -80,12 +75,11 @@ session_start(); // Mută session_start() aici, la început
                 <a href="service.php" class="nav-item nav-link active">Produse</a>
                 <a href="project.php" class="nav-item nav-link">Proiecte</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
-                <a href="cart.php" class="btn btn-primary py-4 px-lg-5  position-relative">
-                <i class="fa fa-shopping-cart me-3"></i> Coș
-                <span class="cart-count"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; ?></span>
-            </a>
+                <a href="cart.php" class="btn btn-primary py-4 px-lg-5 position-relative">
+                    <i class="fa fa-shopping-cart me-3"></i> Coș
+                    <span class="cart-count"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; ?></span>
+                </a>
             </div>
-
         </div>
     </nav>
     <!-- Navbar End -->
@@ -105,109 +99,166 @@ session_start(); // Mută session_start() aici, la început
     </div>
     <!-- Page Header End -->
 
-<!-- Product Details Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <?php
-        include 'db_connect.php';
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-            $sql = "SELECT * FROM produse WHERE id = $id";
-            $result = $conn->query($sql);
-            
-            if ($result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-                echo '<div class="row g-4">';
-                echo '<div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
-                // Afișăm imaginea din baza de date
-                echo '<img class="img-fluid" src="' . htmlspecialchars($row["imagine_path"]) . '" alt="' . htmlspecialchars($row["nume"]) . '">';
-                echo '</div>';
-                echo '<div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">';
-                echo '<h1 class="display-5 mb-3">' . htmlspecialchars($row["nume"]) . '</h1>';
+    <!-- Product Details Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <?php
+            include 'db_connect.php';
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+                $sql = "SELECT * FROM produse WHERE id = $id";
+                $result = $conn->query($sql);
                 
-                // Restul detaliilor produsului
-                echo '<p><strong>Tip produs:</strong> ' . htmlspecialchars($row["product_type"]) . '</p>';
-                if ($row["subcategorie"]) {
-                    echo '<p><strong>Subcategorie:</strong> ' . htmlspecialchars($row["subcategorie"]) . '</p>';
-                }
-                echo '<p><strong>Clasă lemn:</strong> ' . htmlspecialchars($row["clasa_lemn"]) . '</p>';
-                echo '<p><strong>Descriere:</strong> ' . htmlspecialchars($row["descriere"]) . '</p>';
-
-                // Formularul pentru personalizare rămâne neschimbat
-                echo '<form method="post" action="add_to_cart.php">';
-                echo '<input type="hidden" name="product_id" value="' . $id . '">';
-                echo '<input type="hidden" name="product_name" value="' . htmlspecialchars($row["nume"]) . '">';
-
-                echo '<div class="mb-3">';
-                echo '<label for="tip_lemn" class="form-label"><strong>Selectați tipul de lemn:</strong></label>';
-                echo '<select class="form-select" id="tip_lemn" name="tip_lemn" required>';
-                echo '<option value="">Alegeți tipul de lemn</option>';
-                if ($row["clasa_lemn"] == 'Rășinoase') {
-                    echo '<option value="Brad">Brad</option>';
-                    echo '<option value="Molid">Molid</option>';
-                } else {
-                    echo '<option value="Fag">Fag</option>';
-                    echo '<option value="Stejar Gorun">Stejar Gorun</option>';
-                    echo '<option value="Stejar Cer">Stejar Cer</option>';
-                }
-                echo '</select>';
-                echo '</div>';
-
-                echo '<div class="mb-3">';
-                echo '<label for="clasa_calitate" class="form-label"><strong>Selectați clasa de calitate:</strong></label>';
-                echo '<select class="form-select" id="clasa_calitate" name="clasa_calitate" required>';
-                echo '<option value="">Alegeți o clasă</option>';
-                echo '<option value="A">A</option>';
-                echo '<option value="B">B</option>';
-                echo '<option value="C">C</option>';
-                echo '</select>';
-                echo '</div>';
-
-                if ($row["product_type"] != 'Rumeguș') {
-                    echo '<div class="mb-3">';
-                    echo '<label for="dimensiuni" class="form-label"><strong>Introduceți dimensiunile dorite (ex. 2m x 15cm x 5cm):</strong></label>';
-                    echo '<input type="text" class="form-control" id="dimensiuni" name="dimensiuni" placeholder="ex. 2m x 15cm x 5cm" required>';
+                if ($result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    echo '<div class="row g-4">';
+                    echo '<div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
+                    echo '<img class="img-fluid" src="' . htmlspecialchars($row["imagine_path"]) . '" alt="' . htmlspecialchars($row["nume"]) . '">';
                     echo '</div>';
-                }
+                    echo '<div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">';
+                    echo '<h1 class="display-5 mb-3">' . htmlspecialchars($row["nume"]) . '</h1>';
+                    echo '<p><strong>Descriere:</strong> ' . htmlspecialchars($row["descriere"]) . '</p>';
 
-                if ($row["product_type"] == 'Lemn de foc') {
+                    // Formular pentru personalizare
+                    echo '<form method="post" action="add_to_cart.php">';
+                    echo '<input type="hidden" name="product_id" value="' . $id . '">';
+                    echo '<input type="hidden" name="product_name" value="' . htmlspecialchars($row["nume"]) . '">';
+
+                    // Selectare clasa de lemn
                     echo '<div class="mb-3">';
-                    echo '<label for="subcategorie" class="form-label"><strong>Paletat:</strong></label>';
-                    echo '<select class="form-select" id="subcategorie" name="subcategorie" required>';
-                    echo '<option value="">Alegeți o opțiune</option>';
-                    echo '<option value="Paletat">Paletat</option>';
-                    echo '<option value="Non-paletat">Non-paletat</option>';
+                    echo '<label for="clasa_lemn" class="form-label"><strong>Selectați clasa de lemn:</strong></label>';
+                    echo '<select class="form-select" id="clasa_lemn" name="clasa_lemn" required onchange="updateSortimente()">';
+                    echo '<option value="">Alegeți clasa</option>';
+                    echo '<option value="Rășinoase">Rășinoase</option>';
+                    echo '<option value="Esență tare">Esență tare</option>';
                     echo '</select>';
                     echo '</div>';
-                }
 
-                if ($row["product_type"] == 'Rumeguș') {
+                    // Selectare sortiment
                     echo '<div class="mb-3">';
-                    echo '<label for="cantitate" class="form-label"><strong>Cantitate (tone):</strong></label>';
-                    echo '<input type="number" class="form-control" id="cantitate" name="cantitate" step="0.01" min="0" placeholder="ex. 5.50" required>';
+                    echo '<label for="sortiment" class="form-label"><strong>Selectați sortimentul:</strong></label>';
+                    echo '<select class="form-select" id="sortiment" name="sortiment" required>';
+                    echo '<option value="">Alegeți sortimentul</option>';
+                    echo '</select>';
                     echo '</div>';
+
+                    // Clasa de calitate
+                    if ($row["nume"] != 'Rumeguș') {
+                        echo '<div class="mb-3">';
+                        echo '<label for="clasa_calitate" class="form-label"><strong>Selectați clasa de calitate:</strong></label>';
+                        echo '<select class="form-select" id="clasa_calitate" name="clasa_calitate" required>';
+                        echo '<option value="">Alegeți o clasă</option>';
+                        if ($row["nume"] == 'Lemn de foc') {
+                            echo '<option value="Lăturoaie">Lăturoaie</option>';
+                            echo '<option value="Bustean">Bustean</option>';
+                        } else {
+                            echo '<option value="A">A</option>';
+                            echo '<option value="B">B</option>';
+                            echo '<option value="C">C</option>';
+                        }
+                        echo '</select>';
+                        echo '</div>';
+                    }
+
+                    // Dimensiuni
+                    if ($row["nume"] != 'Rumeguș') {
+                        echo '<div class="mb-3">';
+                        echo '<label for="dimensiuni" class="form-label"><strong>Introduceți dimensiunile dorite (ex. 2m x 15cm x 5cm):</strong></label>';
+                        echo '<input type="text" class="form-control" id="dimensiuni" name="dimensiuni" placeholder="ex. 2m x 15cm x 5cm" required>';
+                        echo '</div>';
+                    }
+
+                    // Paletat/Non-paletat
+                    if ($row["nume"] == 'Lemn de foc') {
+                        echo '<div class="mb-3">';
+                        echo '<label for="paletat" class="form-label"><strong>Paletat:</strong></label>';
+                        echo '<select class="form-select" id="paletat" name="paletat" required onchange="updateUnitOfMeasure()">';
+                        echo '<option value="">Alegeți o opțiune</option>';
+                        echo '<option value="Paletat">Paletat</option>';
+                        echo '<option value="Non-paletat">Non-paletat</option>';
+                        echo '</select>';
+                        echo '</div>';
+                    }
+
+                    // Unitatea de măsură
+                    echo '<div class="mb-3">';
+                    echo '<label for="unitate_masura" class="form-label"><strong>Unitate de măsură:</strong></label>';
+                    if ($row["nume"] == 'Cherestea') {
+                        echo '<input type="hidden" id="unitate_masura" name="unitate_masura" value="m3">';
+                        echo '<p>m3</p>';
+                    } elseif ($row["nume"] == 'Rumeguș') {
+                        echo '<input type="hidden" id="unitate_masura" name="unitate_masura" value="tone">';
+                        echo '<p>tone</p>';
+                    } elseif ($row["nume"] == 'Lemn de foc') {
+                        echo '<input type="hidden" id="unitate_masura" name="unitate_masura" value="">';
+                        echo '<p id="unitate_masura_text">Selectați opțiunea Paletat/Non-paletat pentru a seta unitatea de măsură.</p>';
+                    } else {
+                        echo '<select class="form-select" id="unitate_masura" name="unitate_masura" required>';
+                        echo '<option value="">Alegeți unitatea</option>';
+                        echo '<option value="m3">m3</option>';
+                        echo '<option value="bucati">bucăți</option>';
+                        echo '</select>';
+                    }
+                    echo '</div>';
+
+                    // Cantitate
+                    echo '<div class="mb-3">';
+                    echo '<label for="quantity" class="form-label"><strong>Cantitate:</strong></label>';
+                    echo '<input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1" required>';
+                    echo '</div>';
+
+                    echo '<button type="submit" class="btn btn-primary py-2 px-4">Adaugă în coș</button>';
+                    echo '</form>';
+                    echo '</div>';
+                    echo '</div>';
+                } else {
+                    echo '<p>Produsul nu a fost găsit.</p>';
                 }
-
-                echo '<div class="mb-3">';
-                echo '<label for="quantity" class="form-label"><strong>Cantitate (număr de unități):</strong></label>';
-                echo '<input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1" required>';
-                echo '</div>';
-
-                echo '<button type="submit" class="btn btn-primary py-2 px-4">Adaugă în coș</button>';
-                echo '</form>';
-                echo '</div>';
-                echo '</div>';
             } else {
-                echo '<p>Produsul nu a fost găsit.</p>';
+                echo '<p>ID-ul produsului lipsește.</p>';
             }
-        } else {
-            echo '<p>ID-ul produsului lipsește.</p>';
-        }
-        $conn->close();
-        ?>
+            $conn->close();
+            ?>
+        </div>
     </div>
-</div>
-<!-- Product Details End -->
+    <!-- Product Details End -->
+
+    <!-- JavaScript pentru actualizarea sortimentelor și unității de măsură -->
+    <script>
+    function updateSortimente() {
+        var clasaLemn = document.getElementById('clasa_lemn').value;
+        var sortimentSelect = document.getElementById('sortiment');
+        sortimentSelect.innerHTML = '<option value="">Alegeți sortimentul</option>';
+        
+        if (clasaLemn === 'Rășinoase') {
+            sortimentSelect.innerHTML += '<option value="Brad">Brad</option>';
+            sortimentSelect.innerHTML += '<option value="Molid">Molid</option>';
+        } else if (clasaLemn === 'Esență tare') {
+            sortimentSelect.innerHTML += '<option value="Fag">Fag</option>';
+            sortimentSelect.innerHTML += '<option value="Stejar Gorun">Stejar Gorun</option>';
+            sortimentSelect.innerHTML += '<option value="Stejar Cer">Stejar Cer</option>';
+        }
+    }
+
+    function updateUnitOfMeasure() {
+        var paletat = document.getElementById('paletat');
+        var unitateMasuraInput = document.getElementById('unitate_masura');
+        var unitateMasuraText = document.getElementById('unitate_masura_text');
+        
+        if (paletat && unitateMasuraInput && unitateMasuraText) {
+            if (paletat.value === 'Paletat') {
+                unitateMasuraInput.value = 'bucati';
+                unitateMasuraText.innerText = 'Unitatea de măsură: bucăți';
+            } else if (paletat.value === 'Non-paletat') {
+                unitateMasuraInput.value = 'm3';
+                unitateMasuraText.innerText = 'Unitatea de măsură: m3';
+            } else {
+                unitateMasuraInput.value = '';
+                unitateMasuraText.innerText = 'Selectați opțiunea Paletat/Non-paletat pentru a seta unitatea de măsură.';
+            }
+        }
+    }
+    </script>
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -245,15 +296,12 @@ session_start(); // Mută session_start() aici, la început
                     <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" target="_blank">
                         <img src="img/anpc-sol-1.avif" alt="" class="img-fluid">
                     </a>
-                    
                 </div>
-             
             </div>
         </div>
         <div class="container" id="jos">
             <div class="copyright" id="jos2">
-                    <p> &copy; <a class="border-bottom" href="index.php">Doi Ursuleti Forest</a>, All Right Reserved.</p>
-            </div>
+                <p> © <a class="border-bottom" href="index.php">Doi Ursuleti Forest</a>, All Right Reserved.</p>
             </div>
         </div>
     </div>
