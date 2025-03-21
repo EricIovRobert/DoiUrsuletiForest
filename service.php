@@ -6,7 +6,7 @@ include 'db_connect.php'; // Include conexiunea la baza de date
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Woody - Carpenter Website Template</title>
+    <title>Doi Ursuleti</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />

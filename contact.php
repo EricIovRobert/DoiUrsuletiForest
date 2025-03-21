@@ -24,7 +24,7 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Woody - Contact</title>
+    <title>Doi Ursuleti</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
