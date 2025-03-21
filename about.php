@@ -113,17 +113,17 @@ session_start(); // Mută session_start() aici, la început
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5">
       <div class="container py-5">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Despre noi</h1>
         <nav aria-label="breadcrumb animated slideInDown">
            <ol class="breadcrumb">
              <li class="breadcrumb-item">
                <a class="text-white" href="#">Home</a>
              </li>
              <li class="breadcrumb-item">
-               <a class="text-white" href="#">Pages</a>
+               <a class="text-white" href="#">Pagini</a>
              </li>
              <li class="breadcrumb-item text-white active" aria-current="page">
-               About
+               Despre noi
              </li>
            </ol>
          </nav>
@@ -131,62 +131,7 @@ session_start(); // Mută session_start() aici, la început
     </div>
     <!-- Page Header End -->
 
-    <!-- Feature Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <div
-                class="d-flex align-items-center justify-content-center bg-light"
-                style="width: 60px; height: 60px"
-              >
-                <i class="fa fa-user-check fa-2x text-primary"></i>
-              </div>
-              <h1 class="display-1 text-light mb-0">1</h1>
-            </div>
-            <h5>Creative Designers</h5>
-          </div>
-          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <div
-                class="d-flex align-items-center justify-content-center bg-light"
-                style="width: 60px; height: 60px"
-              >
-                <i class="fa fa-check fa-2x text-primary"></i>
-              </div>
-              <h1 class="display-1 text-light mb-0">2</h1>
-            </div>
-            <h5>Quality Products</h5>
-          </div>
-          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <div
-                class="d-flex align-items-center justify-content-center bg-light"
-                style="width: 60px; height: 60px"
-              >
-                <i class="fa fa-drafting-compass fa-2x text-primary"></i>
-              </div>
-              <h1 class="display-1 text-light mb-0">3</h1>
-            </div>
-            <h5>Free Consultation</h5>
-          </div>
-          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <div
-                class="d-flex align-items-center justify-content-center bg-light"
-                style="width: 60px; height: 60px"
-              >
-                <i class="fa fa-headphones fa-2x text-primary"></i>
-              </div>
-              <h1 class="display-1 text-light mb-0">4</h1>
-            </div>
-            <h5>Customer Support</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Feature Start -->
+    
 
     <!-- About Start -->
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
@@ -208,7 +153,7 @@ session_start(); // Mută session_start() aici, la început
           >
             <div class="p-lg-5 pe-lg-0">
               <div class="section-title text-start">
-                <h1 class="display-5 mb-4">About Us</h1>
+                <h1 class="display-5 mb-4">Despre noi</h1>
               </div>
               <p class="mb-4 pb-2">
               Societatea este pe piata din 2018, începând cu domeniul de activitate exploatare forestier. Pe parcurs se poate observa un trend ascendent al societatii, colaborând cu clienti de top, afacerea noastra a avut nevoie de urmatorul pas,  ne-am dorit sa evoluam si sa dezvoltam afacerea pe termen cat mai lung. Astfel in 2024 am achizitionat o linie de debitare Primultini 1300, care debiteaza un volum de 40-60mc material lemnos brut, depinzând de specia lemnului. In continuare avem si ramura de exploatare forestiera care ne ajuta sa alimentam linia de debitare dar achizitionam si de la furnizori. Produsele noastre sunt certificate FSC

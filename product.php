@@ -119,12 +119,13 @@ session_start(); // Mută session_start() aici, la început
                 $row = $result->fetch_assoc();
                 echo '<div class="row g-4">';
                 echo '<div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">';
-                echo '<img class="img-fluid" src="img/service-1.jpg" alt="' . htmlspecialchars($row["nume"]) . '">';
+                // Afișăm imaginea din baza de date
+                echo '<img class="img-fluid" src="' . htmlspecialchars($row["imagine_path"]) . '" alt="' . htmlspecialchars($row["nume"]) . '">';
                 echo '</div>';
                 echo '<div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">';
                 echo '<h1 class="display-5 mb-3">' . htmlspecialchars($row["nume"]) . '</h1>';
                 
-                // Display general product details
+                // Restul detaliilor produsului
                 echo '<p><strong>Tip produs:</strong> ' . htmlspecialchars($row["product_type"]) . '</p>';
                 if ($row["subcategorie"]) {
                     echo '<p><strong>Subcategorie:</strong> ' . htmlspecialchars($row["subcategorie"]) . '</p>';
@@ -132,12 +133,11 @@ session_start(); // Mută session_start() aici, la început
                 echo '<p><strong>Clasă lemn:</strong> ' . htmlspecialchars($row["clasa_lemn"]) . '</p>';
                 echo '<p><strong>Descriere:</strong> ' . htmlspecialchars($row["descriere"]) . '</p>';
 
-                // Form for client customization
+                // Formularul pentru personalizare rămâne neschimbat
                 echo '<form method="post" action="add_to_cart.php">';
                 echo '<input type="hidden" name="product_id" value="' . $id . '">';
                 echo '<input type="hidden" name="product_name" value="' . htmlspecialchars($row["nume"]) . '">';
 
-                // Dropdown for Wood Type
                 echo '<div class="mb-3">';
                 echo '<label for="tip_lemn" class="form-label"><strong>Selectați tipul de lemn:</strong></label>';
                 echo '<select class="form-select" id="tip_lemn" name="tip_lemn" required>';
@@ -153,7 +153,6 @@ session_start(); // Mută session_start() aici, la început
                 echo '</select>';
                 echo '</div>';
 
-                // Dropdown for Quality Class
                 echo '<div class="mb-3">';
                 echo '<label for="clasa_calitate" class="form-label"><strong>Selectați clasa de calitate:</strong></label>';
                 echo '<select class="form-select" id="clasa_calitate" name="clasa_calitate" required>';
@@ -164,7 +163,6 @@ session_start(); // Mută session_start() aici, la început
                 echo '</select>';
                 echo '</div>';
 
-                // Custom Dimensions Input (for Lemn prelucrat and Lemn de foc)
                 if ($row["product_type"] != 'Rumeguș') {
                     echo '<div class="mb-3">';
                     echo '<label for="dimensiuni" class="form-label"><strong>Introduceți dimensiunile dorite (ex. 2m x 15cm x 5cm):</strong></label>';
@@ -172,7 +170,6 @@ session_start(); // Mută session_start() aici, la început
                     echo '</div>';
                 }
 
-                // Dropdown for Paletat/Non-paletat (for Lemn de foc only)
                 if ($row["product_type"] == 'Lemn de foc') {
                     echo '<div class="mb-3">';
                     echo '<label for="subcategorie" class="form-label"><strong>Paletat:</strong></label>';
@@ -184,7 +181,6 @@ session_start(); // Mută session_start() aici, la început
                     echo '</div>';
                 }
 
-                // Quantity Input (for Rumeguș only, in tons)
                 if ($row["product_type"] == 'Rumeguș') {
                     echo '<div class="mb-3">';
                     echo '<label for="cantitate" class="form-label"><strong>Cantitate (tone):</strong></label>';
@@ -192,7 +188,6 @@ session_start(); // Mută session_start() aici, la început
                     echo '</div>';
                 }
 
-                // Quantity Input (for the number of units)
                 echo '<div class="mb-3">';
                 echo '<label for="quantity" class="form-label"><strong>Cantitate (număr de unități):</strong></label>';
                 echo '<input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1" required>';

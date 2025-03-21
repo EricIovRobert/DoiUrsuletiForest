@@ -32,6 +32,15 @@ include 'db_connect.php'; // Include conexiunea la baza de date
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+        .service-item img {
+            height: 400px;
+            width: 100%;       /* Ocupă toată lățimea containerului */
+            object-fit: cover;
+        }
+    </style>
+
 </head>
 <body>
     <!-- Spinner Start -->
@@ -117,7 +126,7 @@ include 'db_connect.php'; // Include conexiunea la baza de date
             </div>
             <div class="row g-4">
                 <?php
-                $sql = "SELECT id, nume, descriere FROM produse";
+                $sql = "SELECT id, nume, descriere, imagine_path FROM produse";
                 $result = $conn->query($sql);
 
                 if ($result === false) {
@@ -127,7 +136,7 @@ include 'db_connect.php'; // Include conexiunea la baza de date
                         echo '<div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">';
                         echo '<div class="service-item">';
                         echo '<div class="overflow-hidden">';
-                        echo '<img class="img-fluid" src="img/service-1.jpg" alt="' . htmlspecialchars($row["nume"]) . '">';
+                        echo '<img class="img-fluid" src="' . htmlspecialchars($row["imagine_path"]) . '" alt="' . htmlspecialchars($row["nume"]) . '">';
                         echo '</div>';
                         echo '<div class="p-4 text-center border border-5 border-light border-top-0">';
                         echo '<h4 class="mb-3">' . htmlspecialchars($row["nume"]) . '</h4>';
