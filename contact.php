@@ -251,12 +251,12 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
     </div>
     <!-- Contact End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+   <!-- Footer Start -->
+   <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Adresă</h4>
+                    <h4 class="text-light mb-4">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Sediu: Vișeu de Sus, Maramureș, str.Cimitirului, nr.16A</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Fabrica: Ilia, Hunedoara, str.Unirii, nr.103A</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0742900678</p>
@@ -265,19 +265,19 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Servicii</h4>
-                    <a class="btn btn-link" href="">Lemn prelucrat</a>
-                    <a class="btn btn-link" href="">Lemn de foc</a>
-                    <a class="btn btn-link" href="">Rumeguș</a>
-                    <a class="btn btn-link" href="">Rășinoase</a>
-                    <a class="btn btn-link" href="">Esență tare</a>
+                    <a class="btn btn-link" href="service.php">Lemn prelucrat</a>
+                    <a class="btn btn-link" href="service.php">Lemn de foc</a>
+                    <a class="btn btn-link" href="service.php">Rumeguș</a>
+                    <a class="btn btn-link" href="service.php">Rășinoase</a>
+                    <a class="btn btn-link" href="service.php">Esență tare</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Link-uri rapide</h4>
-                    <a class="btn btn-link" href="">Despre noi</a>
-                    <a class="btn btn-link" href="">Contact</a>
-                    <a class="btn btn-link" href="">Serviciile noastre</a>
-                    <a class="btn btn-link" href="">Termeni și condiții</a>
-                    <a class="btn btn-link" href="">Suport</a>
+                    <h4 class="text-light mb-4">Link-uri</h4>
+                    <a class="btn btn-link" href="about.php">Despre noi</a>
+                    <a class="btn btn-link" href="contact.php">Contact</a>
+                    <a class="btn btn-link" href="service.php">Servicii</a>
+                    <a class="btn btn-link" href="">Termeni & condiții</a>
+                    <a class="btn btn-link" href="">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Link-uri utile</h4>
@@ -287,12 +287,15 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                     <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" target="_blank">
                         <img src="img/anpc-sol-1.avif" alt="" class="img-fluid">
                     </a>
+                    
                 </div>
+             
             </div>
         </div>
         <div class="container" id="jos">
             <div class="copyright" id="jos2">
-                <p> © <a class="border-bottom" href="index.php">Doi Ursuleti Forest</a>, Toate drepturile rezervate.</p>
+                    <p> &copy; <a class="border-bottom" href="index.php">Doi Ursuleti Forest</a>, All Right Reserved.</p>
+            </div>
             </div>
         </div>
     </div>

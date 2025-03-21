@@ -219,7 +219,7 @@ session_start(); // Mută session_start() aici, la început
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Address</h4>
+                    <h4 class="text-light mb-4">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Sediu: Vișeu de Sus, Maramureș, str.Cimitirului, nr.16A</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Fabrica: Ilia, Hunedoara, str.Unirii, nr.103A</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0742900678</p>
@@ -227,19 +227,19 @@ session_start(); // Mută session_start() aici, la început
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>doiursuletiforest@gmail.com</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Lemn prelucrat</a>
-                    <a class="btn btn-link" href="">Lemn de foc</a>
-                    <a class="btn btn-link" href="">Rumeguș</a>
-                    <a class="btn btn-link" href="">Rășinoase</a>
-                    <a class="btn btn-link" href="">Esență tare</a>
+                    <h4 class="text-light mb-4">Servicii</h4>
+                    <a class="btn btn-link" href="service.php">Lemn prelucrat</a>
+                    <a class="btn btn-link" href="service.php">Lemn de foc</a>
+                    <a class="btn btn-link" href="service.php">Rumeguș</a>
+                    <a class="btn btn-link" href="service.php">Rășinoase</a>
+                    <a class="btn btn-link" href="service.php">Esență tare</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <h4 class="text-light mb-4">Link-uri</h4>
+                    <a class="btn btn-link" href="about.php">Despre noi</a>
+                    <a class="btn btn-link" href="contact.php">Contact</a>
+                    <a class="btn btn-link" href="service.php">Servicii</a>
+                    <a class="btn btn-link" href="">Termeni & condiții</a>
                     <a class="btn btn-link" href="">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
