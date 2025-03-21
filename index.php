@@ -86,12 +86,12 @@ session_start(); // Mută session_start() aici, la început
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link active">Home</a>
-                <a href="about.php" class="nav-item nav-link">About</a>
+                <a href="about.php" class="nav-item nav-link">Despre noi</a>
                 <a href="service.php" class="nav-item nav-link">Produse</a>
-                <a href="project.php" class="nav-item nav-link">Project</a>
+                <a href="project.php" class="nav-item nav-link">Proiecte</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
                 <a href="cart.php" class="btn btn-primary py-4 px-lg-5  position-relative">
-                <i class="fa fa-shopping-cart me-3"></i> Go to Cart
+                <i class="fa fa-shopping-cart me-3"></i> Coș
                 <span class="cart-count"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; ?></span>
             </a>
             </div>

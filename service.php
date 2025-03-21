@@ -72,7 +72,7 @@ include 'db_connect.php'; // Include conexiunea la baza de date
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="img/logo.png" alt="Logo" style="width: 120px; height: auto" />
+            <img src="img/logo.jpg" alt="Logo" style="width: 50px; height: 50;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -80,20 +80,16 @@ include 'db_connect.php'; // Include conexiunea la baza de date
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">Home</a>
-                <a href="about.php" class="nav-item nav-link">About</a>
+                <a href="about.php" class="nav-item nav-link">Despre noi</a>
                 <a href="service.php" class="nav-item nav-link active">Produse</a>
-                <a href="project.php" class="nav-item nav-link">Project</a>
+                <a href="project.php" class="nav-item nav-link">Proiecte</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="cart.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block position-relative">
-                <i class="fa fa-shopping-cart me-3"></i> Go to Cart
-                <span class="cart-count">
-                    <?php 
-                    // session_start() a fost mutat la început, deci acum funcționează
-                    echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; 
-                    ?>
-                </span>
+                <a href="cart.php" class="btn btn-primary py-4 px-lg-5  position-relative">
+                <i class="fa fa-shopping-cart me-3"></i> Coș
+                <span class="cart-count"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; ?></span>
             </a>
+            </div>
+
         </div>
     </nav>
     <!-- Navbar End -->
