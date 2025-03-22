@@ -160,20 +160,34 @@ include 'db_connect.php';
                     }
                     echo '</div>'; // Închide row
                     echo '<form method="post" action="send_cart.php" class="mt-5">';
+
+                    // Primul rând: Nume, Telefon, Email
                     echo '<div class="row g-3">';
-                    echo '<div class="col-12 col-sm-6">';
+                    echo '<div class="col-12 col-sm-4">';
                     echo '<input type="text" name="name" class="form-control border-0" placeholder="Numele tău" style="height: 55px" required>';
                     echo '</div>';
-                    echo '<div class="col-12 col-sm-6">';
+                    echo '<div class="col-12 col-sm-4">';
                     echo '<input type="tel" name="phone" class="form-control border-0" placeholder="Numărul tău de telefon" style="height: 55px" required>';
                     echo '</div>';
-                    echo '<div class="col-12 col-sm-6">';
+                    echo '<div class="col-12 col-sm-4">';
                     echo '<input type="email" name="email" class="form-control border-0" placeholder="Adresa ta de email" style="height: 55px" required>';
                     echo '</div>';
-                    echo '<div class="col-12 col-sm-6">';
+                    echo '</div>';
+
+                    // Al doilea rând: Observații
+                    echo '<div class="row g-3 mt-3">';
+                    echo '<div class="col-12">';
+                    echo '<textarea name="observations" class="form-control border-0" placeholder="Observații (opțional)" rows="4"></textarea>';
+                    echo '</div>';
+                    echo '</div>';
+
+                    // Al treilea rând: Butonul "Trimite coșul"
+                    echo '<div class="row g-3 mt-3">';
+                    echo '<div class="col-12">';
                     echo '<button type="submit" class="btn btn-primary w-100 py-3">Trimite coșul</button>';
                     echo '</div>';
                     echo '</div>';
+
                     echo '</form>';
                 } else {
                     echo '<p>Coșul tău este gol.</p>';

@@ -59,6 +59,12 @@ if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['email']) &&
         $message .= "Cantitate: " . (isset($item['quantity']) ? htmlspecialchars($item['quantity']) : '1') . " " . (isset($item['unitate_masura']) ? htmlspecialchars($item['unitate_masura']) : '') . "\n";
     }
 
+    // Adăugare observații (doar dacă sunt furnizate)
+    if (isset($_POST['observations']) && !empty(trim($_POST['observations']))) {
+        $observations = trim($_POST['observations']);
+        $message .= "\nObservații: " . htmlspecialchars($observations) . "\n";
+    }
+
     // Trimitere email prin PHPMailer
     $mail = new PHPMailer(true);
     try {
