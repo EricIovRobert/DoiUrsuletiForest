@@ -60,11 +60,11 @@ session_start(); // Mută session_start() aici, la început
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>tehnician silvic: 0742900678</small>
+                    <small>Tehnician silvic: 0742900678</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>manager transport: 0742649793</small>
+                    <small>Manager transport: 0742649793</small>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@ session_start(); // Mută session_start() aici, la început
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link">Home</a>
+                <a href="index.php" class="nav-item nav-link">Acasă</a>
                 <a href="about.php" class="nav-item nav-link">Despre noi</a>
                 <a href="service.php" class="nav-item nav-link">Produse</a>
                 <a href="project.php" class="nav-item nav-link active">Proiecte</a>
@@ -104,8 +104,8 @@ session_start(); // Mută session_start() aici, la început
             <h1 class="display-3 text-white mb-3 animated slideInDown">Proiecte</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Acasă</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pagini</a></li>
                     <li class="breadcrumb-item text-white active" aria-current="page">Project</li>
                 </ol>
             </nav>

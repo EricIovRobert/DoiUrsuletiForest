@@ -67,11 +67,11 @@ include 'db_connect.php';
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>tehnician silvic: 0742900678</small>
+                    <small>Tehnician silvic: 0742900678</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>manager transport: 0742649793</small>
+                    <small>Manager transport: 0742649793</small>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@ include 'db_connect.php';
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link">Home</a>
+                <a href="index.php" class="nav-item nav-link">Acasă</a>
                 <a href="about.php" class="nav-item nav-link">Despre noi</a>
                 <a href="service.php" class="nav-item nav-link">Produse</a>
                 <a href="project.php" class="nav-item nav-link">Proiecte</a>
@@ -108,7 +108,7 @@ include 'db_connect.php';
             <h1 class="display-3 text-white mb-3 animated slideInDown">Coș de cumpărături</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Acasă</a></li>
                     <li class="breadcrumb-item text-white active" aria-current="page">Coș</li>
                 </ol>
             </nav>
