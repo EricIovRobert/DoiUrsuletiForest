@@ -34,6 +34,46 @@ session_start(); // Mută session_start() aici, la început
     <link href="css/style.css" rel="stylesheet">
 
 
+    <style>
+    /* Setăm înălțimea fixă pentru containerul caruselului */
+    .carousel-inner {
+      height: 800px;
+      max-height: 800px;
+      overflow: hidden;
+    }
+
+    /* Ajustăm imaginile să se potrivească în container */
+    .carousel-inner .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Opțional: Ajustăm înălțimea pentru ecrane mici */
+    @media (max-width: 767px) {
+      .carousel-inner {
+        height: 300px;
+        max-height: 300px;
+      }
+    }
+    .service-item {
+            height: 400px; /* Înălțimea fixă a cardului */
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Ascunde conținutul care depășește */
+        }
+
+
+
+        /* Stil pentru imagine */
+        .overflow-hidden img.img-fluid {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Imaginea se adaptează fără distorsiuni */
+        }
+  </style>
+
+
     
 </head>
 
@@ -108,7 +148,7 @@ session_start(); // Mută session_start() aici, la început
     <div class="carousel-inner">
       <!-- Prima imagine -->
 <div class="carousel-item active">
-  <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+  <img class="img-fluid" src="img/carusel-1.avif" alt="">
   <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
     <div class="container">
       <div class="row justify-content-center">
@@ -123,7 +163,7 @@ session_start(); // Mută session_start() aici, la început
 
 <!-- A doua imagine -->
 <div class="carousel-item">
-  <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+  <img class="img-fluid" src="img/carusel-2.avif" alt="">
   <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
     <div class="container">
       <div class="row justify-content-center">
@@ -138,7 +178,7 @@ session_start(); // Mută session_start() aici, la început
 
 <!-- A treia imagine -->
 <div class="carousel-item">
-  <img class="img-fluid" src="img/imagine3.avif" alt="">
+  <img class="img-fluid" src="img/carusel-3.avif" alt="">
   <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
     <div class="container">
       <div class="row justify-content-center">
@@ -232,7 +272,7 @@ session_start(); // Mută session_start() aici, la început
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
+                            <img class="img-fluid" src="img/cherestea1.avif" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Lemn prelucrat</h4>
@@ -244,7 +284,7 @@ session_start(); // Mută session_start() aici, la început
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                            <img class="img-fluid" src="img/lemnfoc2.avif" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Lemn de foc</h4>
@@ -256,7 +296,7 @@ session_start(); // Mută session_start() aici, la început
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
+                            <img class="img-fluid" src="img/rumegus2.avif" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Rumeguș</h4>
@@ -268,7 +308,7 @@ session_start(); // Mută session_start() aici, la început
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-4.jpg" alt="">
+                            <img class="img-fluid" src="img/grinzi1.avif" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Rășinoase</h4>
@@ -280,7 +320,7 @@ session_start(); // Mută session_start() aici, la început
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-5.jpg" alt="">
+                            <img class="img-fluid" src="img/traverse1.avif" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Esență tare</h4>
@@ -367,7 +407,7 @@ session_start(); // Mută session_start() aici, la început
                 </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.avif" style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>
