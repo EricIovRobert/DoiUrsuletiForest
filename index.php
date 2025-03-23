@@ -223,7 +223,7 @@ session_start(); // Mută session_start() aici, la început
                         </div>
                         <h1 class="display-1 text-light mb-0">1</h1>
                     </div>
-                    <h5>Designeri Creativi</h5>
+                    <h5>Echipă de Profesioniști</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -375,8 +375,8 @@ session_start(); // Mută session_start() aici, la început
                                         <i class="fa fa-user-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Designeri</p>
-                                        <h5 class="mb-0">Creativi</h5>
+                                        <p class="mb-2">Echipă</p>
+                                        <h5 class="mb-0">Dedicată</h5>
                                     </div>
                                 </div>
                             </div>
