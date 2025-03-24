@@ -277,7 +277,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Lemn prelucrat</h4>
                             <p>Vindem lemn prelucrat, orice dimensiune, la cerere.</p>
-                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="service.php">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -289,7 +289,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Lemn de foc</h4>
                             <p>Oferim lemne de foc de vânzare, cu sau fără paletare.</p>
-                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="service.php">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div> 
                 </div>
@@ -301,7 +301,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Rumeguș</h4>
                             <p>Punem la dispoziție rumeguș, comercializat la tonă.</p>
-                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="service.php">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -313,7 +313,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Rășinoase</h4>
                             <p>Procesăm rășinoase precum brad și molid.</p>
-                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="service.php">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -325,7 +325,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Esență tare</h4>
                             <p>Procesăm esențe tari precum fag, stejar (gorun și cer).</p>
-                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="service.php">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -337,7 +337,7 @@ session_start(); // Mută session_start() aici, la început
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Dimensiuni Personalizate</h4>
                             <p>Adaptăm fiecare produs cerințelor tale.</p>
-                            <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="service.php">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -416,50 +416,51 @@ session_start(); // Mută session_start() aici, la început
     <!-- Feature End -->
 
 
-    <!-- Testimonial Start -->
+<!-- Testimonial Start -->
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
         <div class="section-title text-center">
             <h1 class="display-5 mb-5">Testimoniale</h1>
         </div>
         <div class="row g-4">
-            <!-- Testimonial 1 -->
+            <!-- Testimonial 1 - Cherestea -->
             <div class="col-md-4">
                 <div class="card h-100 text-center p-4 shadow-sm">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle" src="img/testimonial-1.jpg" style="width: 90px; height: 90px" alt="Client 1">
                     <div class="card-body">
-                        <p class="mb-3">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr.</p>
-                        <h5 class="mb-1">Ion Popescu</h5>
-                        <span class="fst-italic text-muted">Client satisfăcut</span>
+                        <p class="mb-3">Am comandat cherestea pentru construcția unui foișor și sunt extrem de mulțumit de calitatea materialului. Lemnul este bine uscat, fără crăpături sau defecte.</p>
+                        <h5 class="mb-1">Ion Vasilescu</h5>
+                        <span class="fst-italic text-muted">Meșter tâmplar</span>
                     </div>
                 </div>
             </div>
-            <!-- Testimonial 2 -->
+            <!-- Testimonial 2 - Grinzi -->
             <div class="col-md-4">
                 <div class="card h-100 text-center p-4 shadow-sm">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle" src="img/testimonial-2.jpg" style="width: 90px; height: 90px" alt="Client 2">
                     <div class="card-body">
-                        <p class="mb-3">Serviciile sunt excelente, recomand cu încredere! Echipa a fost foarte profesionistă și atentă la detalii.</p>
-                        <h5 class="mb-1">Maria Ionescu</h5>
-                        <span class="fst-italic text-muted">Designer interior</span>
+                        <p class="mb-3">Grinzile de la DOI URSULEȚI FOREST SRL sunt perfecte pentru structuri de acoperiș. Rezistente, bine tratate și cu o finisare impecabilă.</p>
+                        <h5 class="mb-1">Mihai Georgescu</h5>
+                        <span class="fst-italic text-muted">Constructor</span>
                     </div>
                 </div>
             </div>
-            <!-- Testimonial 3 -->
+            <!-- Testimonial 3 - Traverse -->
             <div class="col-md-4">
                 <div class="card h-100 text-center p-4 shadow-sm">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle" src="img/testimonial-3.jpg" style="width: 90px; height: 90px" alt="Client 3">
                     <div class="card-body">
-                        <p class="mb-3">Calitate superioară și livrare la timp. A fost o experiență plăcută să lucrez cu ei!</p>
-                        <h5 class="mb-1">Andrei Popa</h5>
-                        <span class="fst-italic text-muted">Antreprenor</span>
+                        <p class="mb-3">Am folosit traversele produse de ei pentru construcția unei platforme industriale. Sunt extrem de solide și bine dimensionate. Calitatea și durabilitatea sunt la superlativ!</p>
+                        <h5 class="mb-1">Alexandru Preda</h5>
+                        <span class="fst-italic text-muted">Manager de proiect</span>
                     </div>
                 </div>
             </div>
+          
+          
+        
         </div>
     </div>
 </div>
 <!-- Testimonial End -->
+
 
 
     <!-- Footer Start -->
