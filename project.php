@@ -32,6 +32,23 @@ session_start(); // Mută session_start() aici, la început
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .portfolio-item .position-relative.overflow-hidden {
+            padding-top: 75%; /* Definește un raport de aspect 4:3; ajustează procentul pentru alt raport, ex. 56.25% pentru 16:9 */
+        }
+
+        .portfolio-item .position-relative.overflow-hidden img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+}
+    </style>
+
+
 </head>
 
 <body>
@@ -113,62 +130,62 @@ session_start(); // Mută session_start() aici, la început
     </div>
     <!-- Page Header End -->
 
-<!-- Projects Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="section-title text-center">
-            <h1 class="display-5 mb-5">Proiectele Noastre</h1>
-        </div>
-        <div class="row g-4 portfolio-container">
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                <div class="rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+    <!-- Projects Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-5">Proiectele Noastre</h1>
+            </div>
+            <div class="row g-4 portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/proiect1.avif" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Producție Lemn Prelucrat</p>
+                            <h5 class="lh-base mb-0">Linie Modernă de Debitare pentru Rășinoase</h5>
                         </div>
                     </div>
-                    <div class="border border-5 border-light border-top-0 p-4">
-                        <p class="text-primary fw-medium mb-2">Producție Lemn Prelucrat</p>
-                        <h5 class="lh-base mb-0">Linie Modernă de Debitare pentru Rășinoase</h5>
-                    </div>
                 </div>
-            </div>
-           
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                <div class="rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+            
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/proiect2.avif" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Producție Lemn Prelucrat</p>
+                            <h5 class="lh-base mb-0">Producție Lemn de Foc pentru Comunități Locale</h5>
                         </div>
                     </div>
-                    <div class="border border-5 border-light border-top-0 p-4">
-                        <p class="text-primary fw-medium mb-2">Producție Lemn Prelucrat</p>
-                        <h5 class="lh-base mb-0">Producție Lemn de Foc pentru Comunități Locale</h5>
-                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                <div class="rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/proiect3.avif" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Proiecte Sustenabile</p>
+                            <h5 class="lh-base mb-0">Utilizarea Rumegușului pentru Energie Verde</h5>
                         </div>
                     </div>
-                    <div class="border border-5 border-light border-top-0 p-4">
-                        <p class="text-primary fw-medium mb-2">Proiecte Sustenabile</p>
-                        <h5 class="lh-base mb-0">Utilizarea Rumegușului pentru Energie Verde</h5>
-                    </div>
                 </div>
+            
+            
             </div>
-          
-           
         </div>
     </div>
-</div>
-<!-- Projects End -->
+    <!-- Projects End -->
         
 
 
