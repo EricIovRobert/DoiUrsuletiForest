@@ -147,49 +147,49 @@ session_start(); // Mută session_start() aici, la început
     <!-- Imaginile caruselului -->
     <div class="carousel-inner">
       <!-- Prima imagine -->
-<div class="carousel-item active">
-  <img class="img-fluid" src="img/carusel-1.avif" alt="">
-  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8 text-center">
-          <h1 class="display-3 text-white mb-4">Lemn prelucrat premium</h1>
-          <p class="fs-5 fw-medium text-white mb-4 pb-2">Calitate superioară pentru construcții solide și durabile!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="carousel-item active">
+            <img class="img-fluid" src="img/carusel-1.avif" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8 text-center">
+                    <h1 class="display-3 text-white mb-4">DOI URSULEȚI FOREST SRL</h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-2">De la Pădure la Perfecțiune</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
 
-<!-- A doua imagine -->
-<div class="carousel-item">
-  <img class="img-fluid" src="img/carusel-2.avif" alt="">
-  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8 text-center">
-          <h1 class="display-3 text-white mb-4">Lemn de foc uscat</h1>
-          <p class="fs-5 fw-medium text-white mb-4 pb-2">Arde eficient și oferă căldură de lungă durată!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <!-- A doua imagine -->
+            <div class="carousel-item">
+            <img class="img-fluid" src="img/carusel-2.avif" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8 text-center">
+                    <h1 class="display-3 text-white mb-4">Lemn de foc uscat</h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Arde eficient și oferă căldură de lungă durată!</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
 
-<!-- A treia imagine -->
-<div class="carousel-item">
-  <img class="img-fluid" src="img/carusel-3.avif" alt="">
-  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8 text-center">
-          <h1 class="display-3 text-white mb-4">Esențe tari și rășinoase</h1>
-          <p class="fs-5 fw-medium text-white mb-4 pb-2">Alege lemnul potrivit pentru fiecare proiect!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <!-- A treia imagine -->
+            <div class="carousel-item">
+            <img class="img-fluid" src="img/carusel-3.avif" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8 text-center">
+                    <h1 class="display-3 text-white mb-4">Esențe tari și rășinoase</h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Alege lemnul potrivit pentru fiecare proiect!</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
 
     <!-- Controalele caruselului -->
     <div class="carousel-controls">
@@ -332,11 +332,11 @@ session_start(); // Mută session_start() aici, la început
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-6.jpg" alt="">
+                            <img class="img-fluid" src="img/cherestea2.avif" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Custom Work</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <h4 class="mb-3">Dimensiuni Personalizate</h4>
+                            <p>Adaptăm fiecare produs cerințelor tale.</p>
                             <a class="fw-medium" href="">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>

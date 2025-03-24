@@ -155,13 +155,40 @@ session_start(); // Mută session_start() aici, la început
                 <h1 class="display-5 mb-4">Despre noi</h1>
               </div>
               <p class="mb-4 pb-2">
-              Societatea este pe piață din 2018, începând cu domeniul de activitate exploatare forestier. Pe parcurs se poate observa un trend ascendent al societății, colaborând cu clienți de top, afacerea noastră a avut nevoie de următorul pas, ne-am dorit să evoluăm și să dezvoltăm afacerea pe termen cât mai lung. Astfel în 2024 am achiziționat o linie de debitare Primultini 1300, care debitează un volum de 40-60mc material lemnos brut, depinzând de specia lemnului. În continuare avem și ramură de exploatare forestieră care ne ajută să alimentăm linia de debitare dar achiziționăm și de la furnizori. Produsele noastre sunt certificate FSC.              </p>
-            </div>
+              DOI URSULEȚI FOREST SRL este o companie cu rădăcini solide în industria exploatării forestiere, dedicată valorificării lemnului într-un mod sustenabil și eficient. Prin pasiune, profesionalism și respect pentru natură, ne-am consolidat poziția pe piață, oferind servicii de înaltă calitate în domeniul exploatării și prelucrării lemnului.
+
+Cu o viziune orientată spre viitor, am făcut pasul următor în evoluția noastră, diversificându-ne activitatea prin investiția într-o linie modernă de debitare a lemnului. Astfel, prin achiziția unui utilaj de ultimă generație, ne-am extins capacitatea de producție, oferind clienților noștri produse finite de calitate superioară, adaptate cerințelor pieței.
+
+Fie că vorbim despre exploatarea responsabilă a resurselor forestiere sau despre transformarea lemnului brut în produse finite, DOI URSULEȚI FOREST rămâne un nume de referință în industrie, combinând tradiția cu tehnologia pentru un viitor durabil.            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- About End -->
+
+
+    <!-- About Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+  <div class="container about px-lg-0">
+    <div class="row g-0 mx-lg-0">
+    <div class="col-lg-6 about-text py-5 wow fadeIn order-lg-1" data-wow-delay="0.5s">
+      <div class="p-lg-5">
+        <div class="section-title text-start">
+          <h1 class="display-5 mb-4">Misiunea Noastră</h1>
+        </div>
+        <p class="mb-4 pb-2">
+        La DOI URSULEȚI FOREST SRL ne dedicăm transformării resurselor forestiere într-o valoare durabilă și superioară, prin exploatarea responsabilă și prelucrarea modernă a lemnului. Ne angajăm să oferim produse și servicii de înaltă calitate, îmbinând tradiția cu tehnologia de ultimă generație și promovând principiile sustenabilității în toate etapele procesului de producție. Respectul pentru mediul înconjurător stă la baza activității noastre, iar inovația constantă ne permite să răspundem eficient cerințelor pieței și nevoilor clienților. În plus, investim în regenerarea și conservarea pădurilor, contribuind la un viitor echilibrat pentru comunitățile noastre și mediul natural. Această abordare integrată reflectă angajamentul nostru de a transforma "De la Pădure la Perfecțiune" într-o realitate cotidiană și durabilă.        </p>
+      </div>
+    </div>
+      <div class="col-lg-6 pe-lg-0 order-lg-2" style="min-height: 400px">
+        <div class="position-relative h-100">
+          <img class="position-absolute img-fluid w-100 h-100" style="object-fit: cover" src="img/traverse.avif" alt="Descrierea imaginii">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About End -->
 
 
     <!-- Footer Start -->
