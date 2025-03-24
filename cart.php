@@ -160,35 +160,52 @@ include 'db_connect.php';
                     }
                     echo '</div>'; // Închide row
                     echo '<form method="post" action="send_cart.php" class="mt-5">';
-
-                    // Primul rând: Nume, Telefon, Email
-                    echo '<div class="row g-3">';
-                    echo '<div class="col-12 col-sm-4">';
-                    echo '<input type="text" name="name" class="form-control border-0" placeholder="Numele tău" style="height: 55px" required>';
+                    echo '<div class="container">';
+                    echo '<div class="row justify-content-center">';
+                    echo '<div class="col-md-8">'; // Formular mai îngust și centrat
+                    echo '<form method="post" action="send_cart.php" class="mt-5">';
+                    echo '<div class="row g-3">'; // Spațiere consistentă între elemente
+                    
+                    // Câmpurile „Numele tău” și „Numărul tău de telefon” unul lângă altul
+                    echo '<div class="col-md-6">';
+                    echo '<div class="form-floating">';
+                    echo '<input type="text" name="name" class="form-control" id="name" placeholder="Numele tău" required>';
+                    echo '<label for="name">Numele tău</label>';
                     echo '</div>';
-                    echo '<div class="col-12 col-sm-4">';
-                    echo '<input type="tel" name="phone" class="form-control border-0" placeholder="Numărul tău de telefon" style="height: 55px" required>';
                     echo '</div>';
-                    echo '<div class="col-12 col-sm-4">';
-                    echo '<input type="email" name="email" class="form-control border-0" placeholder="Adresa ta de email" style="height: 55px" required>';
+                    echo '<div class="col-md-6">';
+                    echo '<div class="form-floating">';
+                    echo '<input type="tel" name="phone" class="form-control" id="phone" placeholder="Numărul tău de telefon" required>';
+                    echo '<label for="phone">Numărul tău de telefon</label>';
                     echo '</div>';
                     echo '</div>';
-
-                    // Al doilea rând: Observații
-                    echo '<div class="row g-3 mt-3">';
+                    
+                    // Câmpul „Adresa ta de email”
                     echo '<div class="col-12">';
-                    echo '<textarea name="observations" class="form-control border-0" placeholder="Observații (opțional)" rows="4"></textarea>';
+                    echo '<div class="form-floating">';
+                    echo '<input type="email" name="email" class="form-control" id="email" placeholder="Adresa ta de email" required>';
+                    echo '<label for="email">Adresa ta de email</label>';
                     echo '</div>';
                     echo '</div>';
-
-                    // Al treilea rând: Butonul "Trimite coșul"
-                    echo '<div class="row g-3 mt-3">';
+                    
+                    // Câmpul „Observații (opțional)”
                     echo '<div class="col-12">';
-                    echo '<button type="submit" class="btn btn-primary w-100 py-3">Trimite coșul</button>';
+                    echo '<div class="form-floating">';
+                    echo '<textarea name="observations" class="form-control" id="observations" placeholder="Observații (opțional)" style="height: 80px"></textarea>';
+                    echo '<label for="observations">Observații (opțional)</label>';
                     echo '</div>';
                     echo '</div>';
-
+                    
+                    // Butonul „Trimite coșul”
+                    echo '<div class="col-12">';
+                    echo '<button type="submit" class="btn btn-primary w-100 py-3" style="background-color: #8B5A2B; border-color: #8B5A2B;">Trimite coșul</button>';
+                    echo '</div>';
+                    
+                    echo '</div>'; // Sfârșit row g-3
                     echo '</form>';
+                    echo '</div>'; // Sfârșit col-md-8
+                    echo '</div>'; // Sfârșit row justify-content-center
+                    echo '</div>'; // Sfârșit container
                 } else {
                     echo '<p>Coșul tău este gol.</p>';
                 }
