@@ -276,7 +276,7 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                     <a class="btn btn-link" href="about.php">Despre noi</a>
                     <a class="btn btn-link" href="contact.php">Contact</a>
                     <a class="btn btn-link" href="service.php">Servicii</a>
-                    <a class="btn btn-link" href="">Termeni & condiții</a>
+                    <a class="btn btn-link" href="termeni.php">Termeni & condiții</a>
                     <a class="btn btn-link" href="">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">

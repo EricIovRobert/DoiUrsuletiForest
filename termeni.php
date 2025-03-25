@@ -96,7 +96,7 @@ session_start(); // Mută session_start() aici, la început
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">Acasă</a>
-                <a href="about.php" class="nav-item nav-link active">Despre noi</a>
+                <a href="about.php" class="nav-item nav-link">Despre noi</a>
                 <a href="service.php" class="nav-item nav-link">Produse</a>
                 <a href="project.php" class="nav-item nav-link">Proiecte</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
@@ -113,7 +113,7 @@ session_start(); // Mută session_start() aici, la început
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5">
       <div class="container py-5">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">Despre noi</h1>
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Termeni și condiții</h1>
         <nav aria-label="breadcrumb animated slideInDown">
            <ol class="breadcrumb">
              <li class="breadcrumb-item">
@@ -123,7 +123,7 @@ session_start(); // Mută session_start() aici, la început
                <a class="text-white" href="#">Pagini</a>
              </li>
              <li class="breadcrumb-item text-white active" aria-current="page">
-               Despre noi
+                Termeni și condiții
              </li>
            </ol>
          </nav>
@@ -131,64 +131,40 @@ session_start(); // Mută session_start() aici, la început
     </div>
     <!-- Page Header End -->
 
-    
+    <!-- Termeni și condiții start -->
+<div class="container py-5">
+  <h2>1. Introducere</h2>
+  <p>Acești termeni și condiții reglementează utilizarea site-ului web <a href="http://www.doiursuleti.ro">www.doiursuleti.ro</a> și achiziționarea de produse de la Doi Ursuleți Forest SRL. Prin accesarea și utilizarea Site-ului, sunteți de acord să respectați acești Termeni. Dacă nu sunteți de acord cu acești Termeni, vă rugăm să nu utilizați Site-ul.</p>
 
-    <!-- About Start -->
-    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-      <div class="container about px-lg-0">
-        <div class="row g-0 mx-lg-0">
-        <div class="col-lg-6 ps-lg-0" style="min-height: 400px">
-          <div class="position-relative h-100">
-            <video class="position-absolute img-fluid w-100 h-100" style="object-fit: cover" controls>
-              <source src="video/video.mp4" type="video/mp4">
-              Browserul tău nu suportă redarea videoclipurilor.
-            </video>
-          </div>
-        </div>
+  <h2>2. Comenzi</h2>
+  <p>Pentru a plasa o comandă, trebuie să aveți cel puțin 18 ani. Comenzile pot fi plasate prin intermediul formularului online disponibil pe site sau prin telefon. Odată plasată, comanda va fi confirmată de noi prin e-mail sau telefon.</p>
 
-          <div
-            class="col-lg-6 about-text py-5 wow fadeIn"
-            data-wow-delay="0.5s"
-          >
-            <div class="p-lg-5 pe-lg-0">
-              <div class="section-title text-start">
-                <h1 class="display-5 mb-4">Despre noi</h1>
-              </div>
-              <p class="mb-4 pb-2">
-              DOI URSULEȚI FOREST SRL este o companie cu rădăcini solide în industria exploatării forestiere, dedicată valorificării lemnului într-un mod sustenabil și eficient. Prin pasiune, profesionalism și respect pentru natură, ne-am consolidat poziția pe piață, oferind servicii de înaltă calitate în domeniul exploatării și prelucrării lemnului.
+  <h2>3. Prețuri și plată</h2>
+  <p>Prețurile pentru produsele noastre sunt comunicate în momentul confirmării comenzii și pot varia în funcție de disponibilitatea produselor.</p>
 
-Cu o viziune orientată spre viitor, am făcut pasul următor în evoluția noastră, diversificându-ne activitatea prin investiția într-o linie modernă de debitare a lemnului. Astfel, prin achiziția unui utilaj de ultimă generație, ne-am extins capacitatea de producție, oferind clienților noștri produse finite de calitate superioară, adaptate cerințelor pieței.
+  <h2>4. Proprietate intelectuală</h2>
+  <p>Tot conținutul Site-ului, inclusiv text, imagini, logo-uri, este proprietatea Doi Ursuleți Forest SRL și este protejat de legile drepturilor de autor. Nu aveți dreptul să copiați, să reproduceți sau să distribuiți conținutul Site-ului fără permisiunea noastră scrisă.</p>
 
-Fie că vorbim despre exploatarea responsabilă a resurselor forestiere sau despre transformarea lemnului brut în produse finite, DOI URSULEȚI FOREST rămâne un nume de referință în industrie, combinând tradiția cu tehnologia pentru un viitor durabil.            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- About End -->
+  <h2>5. Protecția datelor</h2>
+  <p>Ne angajăm să protejăm confidențialitatea datelor dvs. personale. Informațiile furnizate vor fi utilizate doar pentru a procesa comanda dvs. și pentru a vă contacta în legătură cu aceasta. Nu vom partaja datele dvs. cu terțe părți fără consimțământul dvs., cu excepția cazurilor în care este necesar pentru.</p>
 
+  <h2>6. Cookie-uri</h2>
+  <p>Site-ul nostru folosește cookie-uri pentru a îmbunătăți experiența utilizatorului și pentru a gestiona sesiunile de cumpărături. Prin utilizarea Site-ului, sunteți de acord cu utilizarea cookie-urilor. Puteți gestiona preferințele de cookie-uri din setările browserului dvs.</p>
 
-    <!-- About Start -->
-<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-  <div class="container about px-lg-0">
-    <div class="row g-0 mx-lg-0">
-    <div class="col-lg-6 about-text py-5 wow fadeIn order-lg-1" data-wow-delay="0.5s">
-      <div class="p-lg-5">
-        <div class="section-title text-start">
-          <h1 class="display-5 mb-4">Misiunea Noastră</h1>
-        </div>
-        <p class="mb-4 pb-2">
-        La DOI URSULEȚI FOREST SRL ne dedicăm transformării resurselor forestiere într-o valoare durabilă și superioară, prin exploatarea responsabilă și prelucrarea modernă a lemnului. Ne angajăm să oferim produse și servicii de înaltă calitate, îmbinând tradiția cu tehnologia de ultimă generație și promovând principiile sustenabilității în toate etapele procesului de producție. Respectul pentru mediul înconjurător stă la baza activității noastre, iar inovația constantă ne permite să răspundem eficient cerințelor pieței și nevoilor clienților. În plus, investim în regenerarea și conservarea pădurilor, contribuind la un viitor echilibrat pentru comunitățile noastre și mediul natural. Această abordare integrată reflectă angajamentul nostru de a transforma "De la Pădure la Perfecțiune" într-o realitate cotidiană și durabilă.        </p>
-      </div>
-    </div>
-      <div class="col-lg-6 pe-lg-0 order-lg-2" style="min-height: 400px">
-        <div class="position-relative h-100">
-          <img class="position-absolute img-fluid w-100 h-100" style="object-fit: cover" src="img/traverse.avif" alt="Descrierea imaginii">
-        </div>
-      </div>
-    </div>
-  </div>
+  <h2>7. Limitarea răspunderii</h2>
+  <p>Nu suntem responsabili pentru daune indirecte, incidentale sau consecvente rezultate din utilizarea Site-ului sau a produselor noastre. Răspunderea noastră totală pentru orice reclamație este limitată la valoarea comenzii respective.</p>
+
+  <h2>8. Legea aplicabilă</h2>
+  <p>Acești Termeni sunt guvernați de legile României. Orice litigiu va fi supus jurisdicției exclusive a instanțelor din România.</p>
+
+  <h2>9. Modificări ale Termenilor</h2>
+  <p>Ne rezervăm dreptul de a modifica acești Termeni în orice moment. Modificările vor intra în vigoare la data publicării lor pe Site. Vă încurajăm să verificați periodic această pagină pentru a fi la curent cu eventualele modificări.</p>
+
+  <h2>10. Contact</h2>
+  <p>Dacă aveți întrebări sau nelămuriri cu privire la acești Termeni, vă rugăm să ne contactați la adresa de e-mail: <a href="mailto:doiursuletiforest@gmail.com">doiursuletiforest@gmail.com</a> sau la telefon: 0742900678.</p>
 </div>
-<!-- About End -->
+<!-- Termeni și condiții end -->
+
 
 
     <!-- Footer Start -->
