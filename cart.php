@@ -135,7 +135,8 @@ include 'db_connect.php';
                         echo '<div class="overflow-hidden">';
                         echo '<img class="img-fluid" src="' . htmlspecialchars($item['imagine_path']) . '" alt="' . htmlspecialchars($item['nume']) . '">';
                         echo '</div>';
-                        echo '<div class="p-4 text-center border border-5 border-light border-top-0" style="height: 400px; overflow-y: auto;">';
+                        echo '<div class="p-4 text-center border border-5 border-light border-top-0" style="height: 400px; position: relative;">';
+                        echo '<div style="height: 100%; overflow-y: auto; padding-bottom: 60px;">';
                         echo '<h4 class="mb-3">' . htmlspecialchars($item['nume']) . '</h4>';
                         echo '<p><strong>Clasa lemn:</strong> ' . htmlspecialchars($item['clasa_lemn']) . '</p>';
                         echo '<p><strong>Sortiment:</strong> ' . htmlspecialchars($item['sortiment']) . '</p>';
@@ -149,8 +150,9 @@ include 'db_connect.php';
                             echo '<p><strong>Paletat:</strong> ' . htmlspecialchars($item['paletat']) . '</p>';
                         }
                         echo '<p><strong>Cantitate:</strong> ' . htmlspecialchars($item['quantity']) . ' ' . htmlspecialchars($item['unitate_masura']) . '</p>';
+                        echo '</div>';
                         // Buton de ștergere
-                        echo '<form method="post" action="remove_from_cart.php">';
+                        echo '<form method="post" action="remove_from_cart.php" style="position: absolute; bottom: 10px; left: 0; right: 0; text-align: center;">';
                         echo '<input type="hidden" name="index" value="' . $index . '">';
                         echo '<button type="submit" class="btn btn-danger btn-sm">Șterge</button>';
                         echo '</form>';
@@ -262,7 +264,6 @@ include 'db_connect.php';
                     <a class="btn btn-link" href="contact.php">Contact</a>
                     <a class="btn btn-link" href="service.php">Servicii</a>
                     <a class="btn btn-link" href="termeni.php">Termeni & condiții</a>
-                    <a class="btn btn-link" href="">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Link-uri utile</h4>

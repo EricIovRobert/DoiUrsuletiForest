@@ -217,7 +217,6 @@ Fie că vorbim despre exploatarea responsabilă a resurselor forestiere sau desp
                     <a class="btn btn-link" href="contact.php">Contact</a>
                     <a class="btn btn-link" href="service.php">Servicii</a>
                     <a class="btn btn-link" href="termeni.php">Termeni & condiții</a>
-                    <a class="btn btn-link" href="">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Link-uri utile</h4>

@@ -136,31 +136,31 @@ session_start(); // Mută session_start() aici, la început
   <h2>1. Introducere</h2>
   <p>Acești termeni și condiții reglementează utilizarea site-ului web <a href="http://www.doiursuleti.ro">www.doiursuleti.ro</a> și achiziționarea de produse de la Doi Ursuleți Forest SRL. Prin accesarea și utilizarea Site-ului, sunteți de acord să respectați acești Termeni. Dacă nu sunteți de acord cu acești Termeni, vă rugăm să nu utilizați Site-ul.</p>
 
+  <h2>2. Informații despre noi</h2>
+  <p>Doi Ursuleți Forest SRL este o societate cu răspundere limitată, înregistrată în România, cu sediul în Vișeu de Sus, Maramureș, str. Cimitirului, nr. 16A, cod poștal 435700, înregistrată la Registrul Comerțului sub nr. J24/1354/2018 , cod fiscal 39840607.</p>
+
   <h2>2. Comenzi</h2>
   <p>Pentru a plasa o comandă, trebuie să aveți cel puțin 18 ani. Comenzile pot fi plasate prin intermediul formularului online disponibil pe site sau prin telefon. Odată plasată, comanda va fi confirmată de noi prin e-mail sau telefon.</p>
 
   <h2>3. Prețuri și plată</h2>
   <p>Prețurile pentru produsele noastre sunt comunicate în momentul confirmării comenzii și pot varia în funcție de disponibilitatea produselor.</p>
 
-  <h2>4. Proprietate intelectuală</h2>
-  <p>Tot conținutul Site-ului, inclusiv text, imagini, logo-uri, este proprietatea Doi Ursuleți Forest SRL și este protejat de legile drepturilor de autor. Nu aveți dreptul să copiați, să reproduceți sau să distribuiți conținutul Site-ului fără permisiunea noastră scrisă.</p>
-
-  <h2>5. Protecția datelor</h2>
+  <h2>4. Protecția datelor</h2>
   <p>Ne angajăm să protejăm confidențialitatea datelor dvs. personale. Informațiile furnizate vor fi utilizate doar pentru a procesa comanda dvs. și pentru a vă contacta în legătură cu aceasta. Nu vom partaja datele dvs. cu terțe părți fără consimțământul dvs., cu excepția cazurilor în care este necesar pentru.</p>
 
-  <h2>6. Cookie-uri</h2>
+  <h2>5. Cookie-uri</h2>
   <p>Site-ul nostru folosește cookie-uri pentru a îmbunătăți experiența utilizatorului și pentru a gestiona sesiunile de cumpărături. Prin utilizarea Site-ului, sunteți de acord cu utilizarea cookie-urilor. Puteți gestiona preferințele de cookie-uri din setările browserului dvs.</p>
 
-  <h2>7. Limitarea răspunderii</h2>
+  <h2>6. Limitarea răspunderii</h2>
   <p>Nu suntem responsabili pentru daune indirecte, incidentale sau consecvente rezultate din utilizarea Site-ului sau a produselor noastre. Răspunderea noastră totală pentru orice reclamație este limitată la valoarea comenzii respective.</p>
 
-  <h2>8. Legea aplicabilă</h2>
+  <h2>7. Legea aplicabilă</h2>
   <p>Acești Termeni sunt guvernați de legile României. Orice litigiu va fi supus jurisdicției exclusive a instanțelor din România.</p>
 
-  <h2>9. Modificări ale Termenilor</h2>
+  <h2>8. Modificări ale Termenilor</h2>
   <p>Ne rezervăm dreptul de a modifica acești Termeni în orice moment. Modificările vor intra în vigoare la data publicării lor pe Site. Vă încurajăm să verificați periodic această pagină pentru a fi la curent cu eventualele modificări.</p>
 
-  <h2>10. Contact</h2>
+  <h2>9. Contact</h2>
   <p>Dacă aveți întrebări sau nelămuriri cu privire la acești Termeni, vă rugăm să ne contactați la adresa de e-mail: <a href="mailto:doiursuletiforest@gmail.com">doiursuletiforest@gmail.com</a> sau la telefon: 0742900678.</p>
 </div>
 <!-- Termeni și condiții end -->
@@ -193,7 +193,6 @@ session_start(); // Mută session_start() aici, la început
                     <a class="btn btn-link" href="contact.php">Contact</a>
                     <a class="btn btn-link" href="service.php">Servicii</a>
                     <a class="btn btn-link" href="termeni.php">Termeni & condiții</a>
-                    <a class="btn btn-link" href="">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Link-uri utile</h4>

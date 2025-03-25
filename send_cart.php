@@ -33,7 +33,7 @@ if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['email']) &&
         exit();
     }
 
-    // Construire conținut email
+    // Construire conținut email pentru vânzător
     $subject = 'Comanda noua de la ' . htmlspecialchars($client_name);
     $message = "Comanda nouă\n\n";
     $message .= "Nume client: " . htmlspecialchars($client_name) . "\n";
@@ -65,7 +65,7 @@ if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['email']) &&
         $message .= "\nObservații: " . htmlspecialchars($observations) . "\n";
     }
 
-    // Trimitere email prin PHPMailer
+    // Trimitere email către vânzător prin PHPMailer
     $mail = new PHPMailer(true);
     try {
         // Server settings
@@ -76,6 +76,7 @@ if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['email']) &&
         $mail->Password = $_ENV['GMAIL_PASSWORD'];
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
+        $mail->CharSet = 'UTF-8'; // Setăm codarea UTF-8 pentru caractere speciale
 
         // Recipients
         $mail->setFrom($_ENV['GMAIL_USERNAME'], 'Doi Ursuleti Forest');
@@ -83,17 +84,52 @@ if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['email']) &&
         $mail->addReplyTo($client_email, $client_name);
 
         // Content
-        $mail->isHTML(false); // Set to false for plain text
+        $mail->isHTML(false); // Setăm la false pentru text simplu
         $mail->Subject = $subject;
         $mail->Body = $message;
 
-        // Send the email
+        // Trimitem emailul către vânzător
         $mail->send();
-        unset($_SESSION['cart']); // Golește coșul după trimitere
-        header('Location: cart.php?status=success'); // Redirecționează cu mesaj de succes
+
+        // Trimitere email de confirmare către client
+        $mail2 = new PHPMailer(true);
+        try {
+            // Server settings
+            $mail2->isSMTP();
+            $mail2->Host = 'smtp.gmail.com';
+            $mail2->SMTPAuth = true;
+            $mail2->Username = $_ENV['GMAIL_USERNAME'];
+            $mail2->Password = $_ENV['GMAIL_PASSWORD'];
+            $mail2->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail2->Port = 587;
+            $mail2->CharSet = 'UTF-8'; // Setăm codarea UTF-8
+
+            // Recipients
+            $mail2->setFrom($_ENV['GMAIL_USERNAME'], 'Doi Ursuleti Forest');
+            $mail2->addAddress($client_email, $client_name);
+
+            // Content
+            $mail2->isHTML(false); // Text simplu
+            $mail2->Subject = 'Confirmare comandă';
+            $confirm_message = "Stimate " . htmlspecialchars($client_name) . ",\n\n";
+            $confirm_message .= "Comanda dumneavoastră a fost plasată cu succes.\n";
+            $confirm_message .= "Iată ce s-a trimis:\n\n";
+            $confirm_message .= $message; // Adăugăm detaliile comenzii trimise către vânzător
+            $mail2->Body = $confirm_message;
+
+            // Trimitem emailul de confirmare
+            $mail2->send();
+        } catch (Exception $e) {
+            // Dacă emailul de confirmare nu se trimite, înregistrăm eroarea, dar continuăm
+            error_log("Emailul de confirmare către client nu a putut fi trimis. Eroare: {$mail2->ErrorInfo}");
+        }
+
+        // Golește coșul și redirecționează după trimiterea emailului către vânzător
+        unset($_SESSION['cart']);
+        header('Location: cart.php?status=success');
         exit();
     } catch (Exception $e) {
-        echo "Emailul nu a putut fi trimis. Eroare PHPMailer: {$mail->ErrorInfo}";
+        echo "Emailul către vânzător nu a putut fi trimis. Eroare PHPMailer: {$mail->ErrorInfo}";
     }
 } else {
     echo "Coșul este gol sau datele clientului lipsesc.";

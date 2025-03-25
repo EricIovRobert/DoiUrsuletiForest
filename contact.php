@@ -238,7 +238,7 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                         <iframe
                             class="position-absolute w-100 h-100"
                             style="object-fit: cover"
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12406.178691353229!2d24.424520017720585!3d47.71353841035583!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47364733fc0c7cf1%3A0xa0a0d0858ba87a1!2sStrada%20Cimitirului%2016%2C%20Vi%C8%99eu%20de%20Sus%20435700!5e0!3m2!1sen!2sro!4v1742252191022!5m2!1sen!2sro"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2774.6783219350914!2d22.667570075828134!3d45.93772870172035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474efb3148dd5f2d%3A0xc2989df6eeebc49!2sStrada%20Unirii%20103%2C%20Ilia%20337270!5e0!3m2!1sen!2sro!4v1742899824654!5m2!1sen!2sro"
                             frameborder="0"
                             allowfullscreen=""
                             aria-hidden="false"
@@ -277,7 +277,6 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                     <a class="btn btn-link" href="contact.php">Contact</a>
                     <a class="btn btn-link" href="service.php">Servicii</a>
                     <a class="btn btn-link" href="termeni.php">Termeni & condiții</a>
-                    <a class="btn btn-link" href="">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Link-uri utile</h4>
