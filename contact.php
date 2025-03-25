@@ -1,30 +1,88 @@
 <?php
-session_start(); // Start the session at the beginning
+session_start();
+require 'vendor/autoload.php'; // Include PHPMailer și Dotenv autoloader
 
-require 'vendor/autoload.php'; // Include Dotenv autoloader
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 use Dotenv\Dotenv;
 
-// Load environment variables from .env file
+// Activăm raportarea erorilor pentru debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Încărcăm variabilele de mediu din fișierul .env
 try {
     $dotenv = Dotenv::createImmutable(__DIR__);
     $dotenv->load();
-    $dotenv->required(['FORMSPREE_ENDPOINT'])->notEmpty();
+    $dotenv->required(['GMAIL_USERNAME', 'GMAIL_PASSWORD'])->notEmpty();
 } catch (Exception $e) {
     die("Eroare la încărcarea fișierului .env: " . $e->getMessage());
 }
 
-// Get the Formspree endpoint from the .env file
-$formspree_endpoint = $_ENV['FORMSPREE_ENDPOINT'];
+// Inițializăm variabilele pentru datele formularului și mesaje
+$name = $email = $subject = $message = '';
+$success_message = $error_message = '';
 
-// Determine the base URL dynamically for the redirect to success.php
-$base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
-$success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
+// Verificăm dacă formularul a fost trimis
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $subject = $_POST['subject'] ?? '';
+    $message = $_POST['message'] ?? '';
+    $firma_email = 'wovencrib9@gmail.com'; // Adresa firmei (modifică cu adresa reală)
+
+    // Validăm adresa de email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error_message = "Adresa de email invalidă.";
+    } else {
+        // Construim conținutul emailului
+        $email_subject = "Mesaj nou de pe site: " . htmlspecialchars($subject);
+        $email_body = "Nume: " . htmlspecialchars($name) . "\n";
+        $email_body .= "Email: " . htmlspecialchars($email) . "\n";
+        $email_body .= "Subiect: " . htmlspecialchars($subject) . "\n";
+        $email_body .= "Mesaj:\n" . htmlspecialchars($message) . "\n";
+
+        // Inițializăm PHPMailer
+        $mail = new PHPMailer(true);
+        try {
+            // Setări server SMTP
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = $_ENV['GMAIL_USERNAME'];
+            $mail->Password = $_ENV['GMAIL_PASSWORD'];
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
+            $mail->CharSet = 'UTF-8';
+
+            // Destinatari
+            $mail->setFrom($_ENV['GMAIL_USERNAME'], 'Doi Ursuleti Forest');
+            $mail->addAddress($firma_email);
+            $mail->addReplyTo($email, $name);
+
+            // Conținut email
+            $mail->isHTML(false); // Email în format text simplu
+            $mail->Subject = $email_subject;
+            $mail->Body = $email_body;
+
+            // Trimitem emailul
+            $mail->send();
+            $success_message = "Mesajul a fost trimis cu succes!";
+            // Golim câmpurile formularului după trimitere
+            $name = $email = $subject = $message = '';
+        } catch (Exception $e) {
+            $error_message = "Mesajul nu a putut fi trimis. Eroare: {$mail->ErrorInfo}";
+        }
+    }
+}
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="utf-8" />
-    <title>Doi Ursuleti</title>
+    <title>Doi Ursuleti - Contact</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
@@ -107,7 +165,7 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="img/logo.jpg" alt="Logo" style="width: 50px; height: 50;">
+            <img src="img/logo.jpg" alt="Logo" style="width: 50px; height: 50px;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -119,12 +177,11 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                 <a href="service.php" class="nav-item nav-link">Produse</a>
                 <a href="project.php" class="nav-item nav-link">Proiecte</a>
                 <a href="contact.php" class="nav-item nav-link active">Contact</a>
-                <a href="cart.php" class="btn btn-primary py-4 px-lg-5  position-relative">
-                <i class="fa fa-shopping-cart me-3"></i> Coș
-                <span class="cart-count"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; ?></span>
-            </a>
+                <a href="cart.php" class="btn btn-primary py-4 px-lg-5 position-relative">
+                    <i class="fa fa-shopping-cart me-3"></i> Coș
+                    <span class="cart-count"><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; ?></span>
+                </a>
             </div>
-
         </div>
     </nav>
     <!-- Navbar End -->
@@ -148,16 +205,10 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
     <!-- Page Header End -->
 
     <!-- Contact Start -->
-    <div
-        class="container-fluid bg-light overflow-hidden px-lg-0"
-        style="margin: 6rem 0"
-    >
+    <div class="container-fluid bg-light overflow-hidden px-lg-0" style="margin: 6rem 0">
         <div class="container contact px-lg-0">
             <div class="row g-0 mx-lg-0">
-                <div
-                    class="col-lg-6 contact-text py-5 wow fadeIn"
-                    data-wow-delay="0.5s"
-                >
+                <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">Contactați-ne</h1>
@@ -165,8 +216,18 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                         <p class="mb-4">
                             Completați formularul de mai jos pentru a ne trimite un mesaj. Vă vom răspunde cât mai curând posibil.
                         </p>
-                        <!-- Formspree Form -->
-                        <form action="<?php echo htmlspecialchars($formspree_endpoint); ?>" method="POST">
+                        <!-- Afișăm mesajele de succes sau eroare -->
+                        <?php if (!empty($success_message)): ?>
+                            <div class="alert alert-success" role="alert">
+                                <?php echo $success_message; ?>
+                            </div>
+                        <?php elseif (!empty($error_message)): ?>
+                            <div class="alert alert-danger" role="alert">
+                                <?php echo $error_message; ?>
+                            </div>
+                        <?php endif; ?>
+                        <!-- Formularul -->
+                        <form method="POST" action="">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -176,6 +237,7 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                                             id="name"
                                             name="name"
                                             placeholder="Numele tău"
+                                            value="<?php echo htmlspecialchars($name); ?>"
                                             required
                                         />
                                         <label for="name">Numele tău</label>
@@ -189,6 +251,7 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                                             id="email"
                                             name="email"
                                             placeholder="Adresa ta de email"
+                                            value="<?php echo htmlspecialchars($email); ?>"
                                             required
                                         />
                                         <label for="email">Adresa ta de email</label>
@@ -202,6 +265,7 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                                             id="subject"
                                             name="subject"
                                             placeholder="Subiect"
+                                            value="<?php echo htmlspecialchars($subject); ?>"
                                             required
                                         />
                                         <label for="subject">Subiect</label>
@@ -216,14 +280,10 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                                             name="message"
                                             style="height: 100px"
                                             required
-                                        ></textarea>
+                                        ><?php echo htmlspecialchars($message); ?></textarea>
                                         <label for="message">Mesaj</label>
                                     </div>
                                 </div>
-                                <!-- Hidden field to redirect to success.php after submission -->
-                                <input type="hidden" name="_next" value="<?php echo htmlspecialchars($success_url); ?>">
-                                <!-- Hidden field to set the email subject -->
-                                <input type="hidden" name="_subject" value="Mesaj nou de pe site-ul Doi Ursuleti Forest">
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">
                                         Trimite mesajul
@@ -251,8 +311,8 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
     </div>
     <!-- Contact End -->
 
-   <!-- Footer Start -->
-   <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -286,25 +346,19 @@ $success_url = $base_url . dirname($_SERVER['REQUEST_URI']) . "/success.php";
                     <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" target="_blank">
                         <img src="img/anpc-sol-1.avif" alt="" class="img-fluid">
                     </a>
-                    
                 </div>
-             
             </div>
         </div>
         <div class="container" id="jos">
             <div class="copyright" id="jos2">
-                    <p> &copy; <a class="border-bottom" href="index.php">Doi Ursuleti Forest</a>, All Right Reserved.</p>
-            </div>
+                <p> © <a class="border-bottom" href="index.php">Doi Ursuleti Forest</a>, All Right Reserved.</p>
             </div>
         </div>
     </div>
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a
-        href="#"
-        class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"
-    ><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
