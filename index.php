@@ -177,13 +177,13 @@ session_start(); // Mută session_start() aici, la început
 
             <!-- A treia imagine -->
             <div class="carousel-item">
-            <img class="img-fluid" src="img/carusel-3.avif" alt="">
+            <img class="img-fluid" src="img/carusel3.avif" alt="">
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
                 <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-8 text-center">
-                    <h1 class="display-3 text-white mb-4">Esențe tari și rășinoase</h1>
-                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Alege lemnul potrivit pentru fiecare proiect!</p>
+                    <h1 class="display-3 text-white mb-4"></h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-2"></p>
                     </div>
                 </div>
                 </div>
@@ -271,7 +271,7 @@ session_start(); // Mută session_start() aici, la început
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/cherestea1.avif" alt="">
+                            <img class="img-fluid" src="img/lemnservicii.avif" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Lemn prelucrat</h4>
@@ -309,7 +309,7 @@ session_start(); // Mută session_start() aici, la început
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/cherestea2.avif" alt="">
+                            <img class="img-fluid" src="img/cherestea3.avif" alt="">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Dimensiuni Personalizate</h4>
