@@ -98,7 +98,6 @@ session_start(); // Mută session_start() aici, la început
                 <a href="index.php" class="nav-item nav-link">Acasă</a>
                 <a href="about.php" class="nav-item nav-link">Despre noi</a>
                 <a href="service.php" class="nav-item nav-link">Produse</a>
-                <a href="project.php" class="nav-item nav-link">Proiecte</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
                 <a href="cart.php" class="btn btn-primary py-4 px-lg-5  position-relative">
                 <i class="fa fa-shopping-cart me-3"></i> Coș

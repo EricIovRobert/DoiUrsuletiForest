@@ -128,7 +128,6 @@ session_start(); // Mută session_start() aici, la început
                 <a href="index.php" class="nav-item nav-link active">Acasă</a>
                 <a href="about.php" class="nav-item nav-link">Despre noi</a>
                 <a href="service.php" class="nav-item nav-link">Produse</a>
-                <a href="project.php" class="nav-item nav-link">Proiecte</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
                 <a href="cart.php" class="btn btn-primary py-4 px-lg-5  position-relative">
                 <i class="fa fa-shopping-cart me-3"></i> Coș
@@ -305,30 +304,8 @@ session_start(); // Mută session_start() aici, la început
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/grinzi1.avif" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Rășinoase</h4>
-                            <p>Procesăm rășinoase precum brad și molid.</p>
-                            <a class="fw-medium" href="service.php">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/traverse1.avif" alt="">
-                        </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Esență tare</h4>
-                            <p>Procesăm esențe tari precum fag, stejar (gorun și cer).</p>
-                            <a class="fw-medium" href="service.php">Află mai multe<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
+                
+                
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
